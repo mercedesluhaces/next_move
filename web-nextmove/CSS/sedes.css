@@ -1,0 +1,161 @@
+body {
+  height: 100%;
+  margin: 0;
+  background-image: url('../imagenes/fondo-index.png');
+  background: contain;
+}
+
+/*VERSION DE ESCRITORIO*/
+.contenedor {
+  display: grid;
+  grid-template-areas:
+    "header nav nav"
+    "main main main"
+    "footer footer footer";
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  
+  grid-area: main;
+}
+
+footer {
+  
+  grid-area: footer;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/*isotipo*/
+.logo {
+  height: 40px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+/*navegador*/
+.nav-link {
+  color: white;
+  margin: 10px;
+}
+
+/*noticias*/
+.noticias1 {
+  margin: 10px;
+  /*display flex*/
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.noticias1 figure {
+  text-align: center;
+  background-color: #e7e7e7;
+  width: 350px;
+  border-radius: 5px;
+}
+
+.noticias1 figure img {
+  border-radius: 5px 5px 0px 0px;
+  width: 350px;
+}
+
+.noticias1 figure figcaption {
+  font-size: 17px;
+  color: #202020;
+  margin: 15px;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.noticias1 figure p {
+  font-size: 13px;
+  color: #202020;
+  font-weight: 400;
+  text-align: left;
+  font-family: 'Montserrat';
+}
+
+.button {
+  font-size: 13px;
+  color: #202020;
+}
+
+/* footer */
+/*logo*/
+.logoFooter {
+  height: 20px;
+  margin-top: 7px;
+}
+
+/*texto footer*/
+.textoFooter {
+  color: white;
+  font-family: 'Montserrat';
+  margin-top: 1px;
+  font-size: 12px;
+}
+
+/*VERSION DE TABLET*/
+@media (max-width:1100px) {
+  .contenedor {
+    display: grid;
+    grid-template-areas:
+      "header nav nav"
+      "main main main"
+      "footer footer footer";
+  }
+
+  /*noticias*/
+  .noticias1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .noticias1 figure {
+    width: 650px;
+  }
+
+  .noticias1 figure img {
+    width: 650px;
+  }
+
+  footer {
+    position: relative;
+    margin-top: 30px;
+  }
+}
+
+
+/*VERSION DE CELULAR*/
+@media (max-width:700px) {
+  .contenedor {
+    display: grid;
+    grid-template-areas:
+      "header nav nav"
+      "main main main"
+      "footer footer footer";
+  }
+
+  /*noticias*/
+  .noticias1 figure {
+    width: 350px;
+  }
+
+  .noticias1 figure img {
+    width: 350px;
+  }
+}
