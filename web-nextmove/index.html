@@ -17,47 +17,38 @@
 
     <!-- CSS only BOOSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Fuentes awesome -->
+    <script src="https://kit.fontawesome.com/db06b98956.js" crossorigin="anonymous"></script>
 
     <!-- link CSS -->
     <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
 
 <body class="contenedor">
- 
-
-    <header>
-        <img class="logo" src="imagenes/logo.png">
+    <!-- Cabecera -->
+    <header class="header">
+        <img class="logo" src="../imagenes/logo.png">
     </header>
 
-    <nav class="navbar navbar-expand-lg ms-auto">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sedes.html">Sedes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+    <!-- Navegacion -->  
+    <nav> 
+        <ul class="nav-links">
+        <li><a href="../index.html" >Inicio</a></li>
+        <li><a href="../nosotros/nosotros.html" >Nosotros</a></li>
+        <li><a href="../servicios/servicios.html" >Servicios</a></li>
+        <li><a href="../sedes/sedes.html" >Sedes</a></li>
+        <li><a href="../contacto/contacto.html" >Contacto</a></li>
+        </ul>
+        <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
         </div>
     </nav>
 
+    <!-- Principal -->
     <main class="sectionA">
         <div data-aos="fade-up">
             <div class="textoInicio">
@@ -69,20 +60,28 @@
         </div>
     </main>
 
+    <!-- Segunda seccion -->
     <section class="sectionB">
         <div data-aos="fade-up"><img class="fondoInicio" src="imagenes/fondo_inicio.png">
         </div>
     </section>
 
+    <!-- Whatsapp Sticky -->
+    <a href="" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+
+    <!-- Footer -->
     <footer>
         <p class="textoFooter">Todos los derechos reservados</p>
     </footer>
 
-    <!-- link animacion -->
+    <!-- Animaciones -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
+    <!-- Javascript -->
+    <script defer src="../js/index.js"></script>
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
