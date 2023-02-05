@@ -4,7 +4,6 @@ body {
     background-image: url('../imagenes/fondo4.svg');
     background-repeat:no-repeat;
     background-size: cover;
-    overflow-y: hidden;
 }
 
 /*VERSION DE CELULAR*/
@@ -28,15 +27,23 @@ header {
 
   .sectionA {
     grid-area: sectionA;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
   }
 
   .sectionB {
     grid-area: sectionB;
+    display: flex;
   }
 
   body {
     overflow-x: hidden;
   }
+
+nav{
+    z-index: 100;
+}
 
 .nav-links {
     position: fixed;
@@ -111,43 +118,55 @@ header {
   margin-top: 20px;
 }
 
-.sectionB {
-    text-align: center;
-}
-
-/*seccionB*/
-.fondoInicio {
-    height: 300px;
-    
-}
-
-/*seccionA*/
+/*texto cuerpo*/
 .textoInicio {
-    margin-left: 100px;
-    margin-top: 100px;
+    display:flex;
+    flex-direction:column ;
+    align-items: flex-start;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-right: 30px;
+    color: white;
+}
+
+.tituloInicio {
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .logo-inicio {
     height: 170px;
     width: auto;
-}
-
-.tituloInicio {
-    font-size: 19px;
+    margin-bottom: 20px;
 }
 
 .subtituloInicio {
     font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
 
-/*footer*/
-.logoFooter {
-    margin-top: 7px;
+.sectionB {
+    text-align: center;
 }
 
-.textoFooter {
-    margin-top: 1px;
-}
+    /*imagen cuerpo*/
+    .fondoInicio {
+        height: 300px;
+        position: relative;
+        margin:30px;
+    }
+
+    /*footer*/
+    footer {
+        grid-area: footer;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 
 .whatsapp{
     position:fixed;
@@ -160,6 +179,15 @@ header {
     text-align:center;
     font-size:40px;
     z-index:100;
+}
+
+/*texto footer*/
+.textoFooter {
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat';
+    margin-top: 5px;
+    font-size: 12px;
 }
 
 
@@ -178,6 +206,7 @@ header {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+        z-index: auto;
     }
 
     .nav-links {
@@ -233,7 +262,6 @@ header {
 
     .logo-inicio {
         height: 130px;
-    
     }
 
     .subtituloInicio {
@@ -242,7 +270,8 @@ header {
 
     /*seccionB*/
     .fondoInicio {
-        height: 420px;
+        height: 450px;
+        width: 500px;
     }
 
     /*footer*/
@@ -266,7 +295,7 @@ header {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        
+        z-index: auto;
     }
 
     .nav-links {
@@ -305,69 +334,36 @@ header {
         margin-left: 50px;
         margin-top: 30px;
     }
-
-    /*seccion A*/
-    .sectionA {
-        grid-area: sectionA;
-        margin: 10px auto 10px auto;
+    
+    .textoInicio {
+        margin-left: 100px;
+        margin-top: 100px;
+        margin-right:0;
+    }
+    
+    .logo-inicio {
+        height: 170px;
+        width: auto;
+    }
+    
+    .tituloInicio {
+        font-size: 19px;
+    }
+    
+    .subtituloInicio {
+        font-size: 20px;
     }
 
-        /*texto cuerpo*/
-        .textoInicio {
-            margin-left: 100px;
-            margin-top: 100px;
-            color: white;
-            
-        }
-
-        .tituloInicio {
-            font-size: 19px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            text-transform: uppercase;
-        }
-
-        .logo-inicio {
-            height: 170px;
-            width: auto;
-            margin-bottom: 20px;
-        }
-
-        .subtituloInicio {
-            font-size: 20px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            letter-spacing: 2px;
-        }
-
-    /*seccion B*/
-    .sectionB {
-        grid-area: sectionB;
-        text-align: end;
+    /*seccionB*/
+    .sectionB{
+        justify-content: center;
     }
 
-        /*imagen cuerpo*/
-        .fondoInicio {
-            height: 500px;
-            position: relative;
-            margin-right: 120px;
-        }
-
-        /*footer*/
-        footer {
-            grid-area: footer;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .textoFooter {
-            color: white;
-            font-family: 'Montserrat';
-            margin-top: 5px;
-            font-size: 12px;
-            text-align: center;
-        }
+    .fondoInicio {
+        height: 550px;
+        width: auto;
+        margin:0;
+    }
 
     .whatsapp{
         bottom:40px;
