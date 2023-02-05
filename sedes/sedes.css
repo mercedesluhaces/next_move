@@ -215,7 +215,7 @@ nav{
 /*footer*/
 footer {
   grid-area: footer;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
