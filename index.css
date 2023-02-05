@@ -1,9 +1,10 @@
 body {
     margin: 0;
     height: 100vh;
-    background-image: url('../imagenes/fondo4.svg');
+    background-image: url('/imagenes/fondo4.svg');
     background-repeat:no-repeat;
     background-size: cover;
+    overflow-y: auto;
 }
 
 /*VERSION DE CELULAR*/

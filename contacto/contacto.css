@@ -4,7 +4,7 @@ body {
   background-image: url("../imagenes/fondo_contacto.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 /*GRID AREA*/
@@ -175,6 +175,10 @@ body {
     margin-left: 35px;
     margin-top: -48px;
     color: white;
+    text-decoration: none;
+  }
+
+  .subtitulo a{
     text-decoration: none;
   }
 
