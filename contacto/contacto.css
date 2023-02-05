@@ -168,23 +168,24 @@ body {
   }
 
   .subtitulo {
-    font-size: 10px;
+    font-size: 18px;
     font-family: 'Montserrat';
     font-weight: 600;
     font-style: italic;
     margin-left: 35px;
     margin-top: -48px;
     color: white;
+    text-decoration: none;
   }
 
   .instagram{
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
   }
 
   .whatsapp-b{
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
   }
 
   /*footer*/
