@@ -1,7 +1,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background-image: url("../imagenes/fondo_contacto.jpg");
+  background-image: url("../imagenes/fondo_contacto.webp");
   background-repeat: no-repeat;
   background-size: cover;
   overflow-y: hidden;
