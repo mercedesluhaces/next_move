@@ -5,6 +5,8 @@ body {
     background-repeat:no-repeat;
     background-size: cover;
     overflow-y: auto;
+    overflow-x: hidden;
+  
 }
 
 /*VERSION DE CELULAR*/
@@ -36,10 +38,6 @@ header {
   .sectionB {
     grid-area: sectionB;
     display: flex;
-  }
-
-  body {
-    overflow-x: hidden;
   }
 
 nav{
