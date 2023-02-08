@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background-image: url("../imagenes/fondo_contacto.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -196,7 +196,7 @@ body {
 
   footer {
     grid-area: footer;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
   }
@@ -452,7 +452,6 @@ body {
     font-size:40px;
   }
 
-
   /*informacion de contacto escritorio*/
   .textoContacto {
     flex-direction: row;
@@ -481,4 +480,11 @@ body {
   }
  
 
+}
+
+/*Escritorio grande*/
+@media (min-width:1400px) {
+  .fondo-burbuja{
+    top:700px;
+  }
 }

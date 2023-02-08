@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   background-color: black;
   background-image: url('../imagenes/fondo_sedes.webp');
   background-size: cover;
@@ -215,7 +215,7 @@ nav{
 /*footer*/
 footer {
   grid-area: footer;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   width: 100%;
 }

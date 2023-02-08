@@ -12,8 +12,10 @@ window.onload = function () {
     ];
 
     // Variables iniciales ...
-    const TIEMPO_INTERVALO_MILESIMAS_SEG = 3000;
+    const TIEMPO_INTERVALO_MILESIMAS_SEG = 5000;
     let posicionActual = 0;
+    let posicionSiguiente = posicionActual + 1;
+    let posicionFinal = posicionActual + 2;
     let $botonRetroceder = document.querySelector('#retroceder');
     let $botonAvanzar = document.querySelector('#avanzar');
     let $imagen = document.querySelector('#imagen');
@@ -27,11 +29,28 @@ window.onload = function () {
 
     //Cambiar a la foto siguiente ...
     function pasarFoto() {
+
+        // primer imagen ...
         if( posicionActual >= IMAGENES.length - 1 ) {
             posicionActual = 0;
         } else {
             posicionActual++;
         }
+
+        // segunda imagen ...
+        if( posicionSiguiente >= IMAGENES.length - 1 ) {
+            posicionSiguiente = 0;
+        } else {
+            posicionSiguiente++;
+        }
+
+        // tercera imagen ... 
+        if( posicionFinal >= IMAGENES.length - 1 ) {
+            posicionFinal = 0;
+        } else {
+            posicionFinal++;
+        }
+
         renderizarImagen();
     }
 
@@ -48,11 +67,19 @@ window.onload = function () {
     // Funcion que actualiza la imagen de imagen dependiendo de la posicion ...
     function renderizarImagen () {
         if(screen.width > 1024 ){
+            // primera imagen ...
             $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
-            $imagenDos.style.backgroundImage = `url(${IMAGENES[posicionActual+1]})`;
+            $imagen.style.margin = "5px";
+
+            // segunda imagen ...
+            $imagenDos.style.backgroundImage = `url(${IMAGENES[posicionSiguiente]})`;
             $imagenDos.style.display = "block";
-            $imagenTres.style.backgroundImage = `url(${IMAGENES[posicionActual+2]})`;
+            $imagenDos.style.margin = "5px";   
+
+            // tercera imagen ...
+            $imagenTres.style.backgroundImage = `url(${IMAGENES[posicionFinal]})`;
             $imagenTres.style.display = "block";
+            $imagenTres.style.margin = "5px";
         }else{
             $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
         }
@@ -61,10 +88,6 @@ window.onload = function () {
     // Activa el cambio automatico de imagen ...
     function playIntervalo() {
         intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG); // ejecuta pasar foto cada x tiempo ...
-
-        // Desactivamos los botones de control ...
-        // $botonAvanzar.setAttribute('disabled', true);
-        // $botonRetroceder.setAttribute('disabled', true);
     }
 
     //////////////////////////////////////////////////////////////////////
