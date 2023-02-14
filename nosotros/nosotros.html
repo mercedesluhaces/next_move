@@ -4,10 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Move</title>
+    <title>Next Move | Entrenamiento Personalizado</title>
+    <meta name="description" content="Next Move | Gimnasio CLUB DE ENTRENAMIENTO PERSONALIZADO. Comenzá a entrenar con un plan que se adapte a tus necesidades.Entrená la fuerza #SumateAlClub.">
+    <meta name="keywords" content="gimnasio, club, entrenamiento personalizado, entrenar, gimnasio rosario, gym, next, move, mayores, juvenil, infantil, fuerza, gimnasio personalizado, yoga">
+    <meta name="author" content="Design by Mercedes Luhaces - Diseñadora Industrial; Developed by Diego A. López - Software Developer">
 
     <!-- link fuente -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600;1,800&display=swap" rel="stylesheet">
 
     <!-- link AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,24 +28,60 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
+    <!-- Fuentes awesome -->
+    <script src="https://kit.fontawesome.com/db06b98956.js" crossorigin="anonymous"></script>
+
     <!-- link CSS -->
     <link rel="stylesheet" type="text/css" href="../nosotros/nosotros.css">
 </head>
 
 <body class="contenedor">
-    
+    <!-- Cabecera -->
+    <header class="header">
+        <a href="/index.html"><img class="logo" alt="next move" src="/imagenes/logo.webp"></a>
+    </header>
+
+    <!-- Navegacion -->  
+    <nav> 
+        <ul class="nav-links">
+        <li><a href="/index.html" >Inicio</a></li>
+        <li><a href="/nosotros/nosotros.html" >Nosotros</a></li>
+        <li><a href="/servicios/servicios.html" >Servicios</a></li>
+        <li><a href="/sedes/sedes.html" >Sedes</a></li>
+        <li><a href="/contacto/contacto.html" >Contacto</a></li>
+        </ul>
+        <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        </div>
     </nav>
 
 
     <main class="sectionA">
-    
+        <div class="imagenNosotros">
+            <img class="imagen-nosotros" src="../imagenes/nosotros/nosotros_tom_cande.webp" alt="Founders">
+        </div>
     </main>
 
     <section class="sectionB">
-        
+        <div class="textoNosotros">
+            <h5 class="subtituloNosotros">Hola! Somos:</h5>
+            <h1 class="tituloNosotros"><strong>Candela y Tomás.</strong></h1>
+            <p>Ambos profes de Educación Física, orientados hacia el entrenamiento de la fuerza,<br>
+             <strong>y apasionados por el movimiento y la salud.</strong></p>
+            <p class="parrafoSecundario">Inquietos y con ganas de más, surge esto tan<br>
+               lindo llamado:</p>
+            <h2 class="tituloNosotros"><strong>#NEXTMOVE</strong></h2>
+        </div>
     </section>
 
 
+    <!-- Whatsapp Sticky -->
+    <div class="whatsapp-sticky">
+        <a href="https://api.whatsapp.com/send?phone=3415507642" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+    </div>
+    <!-- Footer -->
     <footer>
         <p class="textoFooter">Todos los derechos reservados</p>
     </footer>
@@ -46,6 +91,10 @@
         AOS.init();
 
     </script>
+
+    <!-- Javascript -->
+    <script defer src="/js/navbar.js"></script>
+
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"

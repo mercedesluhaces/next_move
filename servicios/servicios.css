@@ -11,6 +11,7 @@ body {
 /*CELULAR*/
 .contenedor {
     display: grid;
+    grid-template-rows: auto 1fr 1fr auto;
     grid-template-areas:
         "header nav"
         "sectionA sectionA"
@@ -213,9 +214,16 @@ button{
     text-decoration: none;
 }
 
+a .whatsapp {
+  color:white;
+}
+
+.whatsapp-sticky a :hover{
+  color:white;
+}
+
 footer {
     grid-area: footer;
-    /* position: absolute; */
     bottom: 0;
     width: 100%;
 }

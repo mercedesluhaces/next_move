@@ -11,6 +11,7 @@ body {
 /*CELULAR*/
 .contenedor {
   display: grid;
+  grid-template-rows: auto 1fr 1fr auto;
   grid-template-areas:
     "header nav"
     "sectionA sectionA"
@@ -155,32 +156,28 @@ body {
   width: 100%;
 }
 
-  .textoContacto {
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    justify-content: space-evenly;
-  }
+.textoContacto {
+  display:flex;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
-  .subtitulo {
-    line-height: 100px;
-  }
+.subtitulo {
+  line-height: 100px;
+}
 
-  .subtitulo {
-    font-size: 18px;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-style: italic;
-    margin-left: 35px;
-    margin-top: -48px;
-    color: white;
-    text-decoration: none;
-  }
-
-  .subtitulo a{
-    text-decoration: none;
-  }
+.subtitulo {
+  font-size: 18px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-style: italic;
+  margin-left: 35px;
+  margin-top: -48px;
+  color: white;
+  text-decoration: none;
+}
 
   .instagram{
     width: 20px;
@@ -196,7 +193,6 @@ body {
 
   footer {
     grid-area: footer;
-    /* position: absolute; */
     bottom: 0;
     width: 100%;
   }
@@ -212,6 +208,24 @@ body {
     text-align:center;
     font-size:40px;
     z-index:100;
+  }
+
+  .subtitulo a {
+    color:white;
+    text-decoration: none;
+  }
+
+  .subtitulo a :hover {
+    text-decoration: none;
+    color:white;
+  }
+
+  a .whatsapp {
+    color:white;
+  }
+
+  .whatsapp-sticky a :hover{
+    color:white;
   }
 
   .fondo-img-burbuja{
@@ -412,6 +426,10 @@ body {
     margin-top: 30px;
   }
 
+  .textoContacto {
+    align-items: center;
+  }
+
   /*footer*/
   /*logo*/
   .logoFooter {
@@ -475,16 +493,16 @@ body {
 
   .fondo-burbuja{
     position:fixed;
-    top:550px;
-    width: 720px;
+    top:650px;
+    
   }
  
 
 }
 
 /*Escritorio grande*/
-@media (min-width:1400px) {
+@media (min-width:1920px) {
   .fondo-burbuja{
     top:700px;
   }
-}
+} 
