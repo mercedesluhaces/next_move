@@ -114,12 +114,12 @@ body {
 
 /*seccion A*/
 .sectionA {
+  display:flex;
   height: auto;
   border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 25px;
+  justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
   .sectionA h1{
@@ -493,16 +493,13 @@ body {
 
   .fondo-burbuja{
     position:fixed;
-    top:650px;
-    
+    top:700px;
   }
- 
-
 }
 
 /*Escritorio grande*/
 @media (min-width:1920px) {
   .fondo-burbuja{
-    top:700px;
+    top:790px;
   }
 } 

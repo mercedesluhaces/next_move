@@ -2,15 +2,12 @@ body {
     margin: 0;
     min-height: 100vh;
     background-color: black;
-    background-image: url('');
+    background-image: url('../imagenes/nosotros/fondo-nosotros.jpg');
     background-repeat:no-repeat;
     background-size: cover;
     overflow-y: auto;
     overflow-x: hidden;
 }
-
-/*GRID AREA*/
-/*CELULAR*/
 
 /*VERSION DE CELULAR*/
 .contenedor {
@@ -37,6 +34,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top:15px;
+    margin-bottom: 15px;
   }
 
   .sectionB {
@@ -130,13 +129,12 @@ nav{
   display:flex;
   flex-direction:column ;
   color: white;
-  margin-left: 40px;
 }
 
 .tituloNosotros{
   font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
 }
 
 .subtituloNosotros{
@@ -192,7 +190,66 @@ a .whatsapp {
     font-size: 12px;
 }
 
-/*GRID AREA*/
+/*CELULAR GRANDE*/
+@media (min-width:385px) {
+  .contenedor {
+    grid-template-rows: auto 0.90fr auto;
+  }
+
+  .sectionA {
+    margin: 0;
+  }
+}
+
+/*TABLET*/
+@media (min-width:768px) {
+
+  .sectionA{
+    margin-top:20px;
+    margin-bottom: 20px;
+  }
+
+  .burger {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 15px;;
+    margin-top:4vh;
+  }
+  
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /*isotipo*/
+  .logo {
+    height: 40px;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+  
+  .imagen-nosotros{
+    height: 550px;
+  }
+   
+  .tituloNosotros{
+    font-size: 30px;
+  }
+  
+  .subtituloNosotros{
+    font-size: 25px;
+  }
+  
+  p{
+    font-size: 18px;
+  }
+  
+}
+
 /*ORDENADOR*/
 @media (min-width:1024px) {
     .contenedor {
@@ -203,8 +260,15 @@ a .whatsapp {
     }
 
     .sectionA {
-      margin-left:50px;
+      margin-left:100px;
+      margin-top:0;
+      margin-bottom:0;
     }
+    
+    .sectionB{
+      margin-left: 50px;
+    }
+
     nav {
         position:fixed;
         display: flex;
@@ -251,23 +315,55 @@ a .whatsapp {
     }
 
     .imagen-nosotros{
-      height: 500px;
+      height: 550px;
     }
     
     .textoNosotros {
-      margin-left: 0px;
-      margin-top:70px
+      margin-top:100px;
+      width:100%;
     }
     
     .tituloNosotros{
-      font-size: 25px;
+      font-size: 45px;
+      letter-spacing: 2px;
     }
     
     .subtituloNosotros{
-      font-size: 20px;
+      font-size: 35px;
+      letter-spacing: 2px;
     }
     
     p{
-      font-size: 16px;
+      font-size: 26px;
+      letter-spacing: 1px;
     }
+}
+
+@media(min-width:1920px) {
+
+    .imagen-nosotros{
+      height: 700px;
+    }
+
+    .textoNosotros {
+      width: 100%;
+      margin-left: 100px;
+      margin-top:100px
+    }
+    
+    .tituloNosotros{
+      font-size: 50px;
+      letter-spacing: 2px;
+    }
+    
+    .subtituloNosotros{
+      font-size: 40px;
+      letter-spacing: 2px;
+    }
+    
+    p{
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+
 }

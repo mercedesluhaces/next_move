@@ -3,12 +3,12 @@ window.onload = function () {
     
     // Array con las imagenes del carrousel ...
     const IMAGENES = [
-        '../imagenes/servicios/personalizado.webp',
-        '../imagenes/servicios/yoga.webp',
+        '../imagenes/servicios/ent-personalizado.webp',
+        '../imagenes/servicios/ent-yoga.webp',
         '../imagenes/servicios/online.webp',
-        '../imagenes/servicios/juvenil.webp',
+        '../imagenes/servicios/ent-juvenil.webp',
         '../imagenes/servicios/infan_juvenil.webp',
-        '../imagenes/servicios/adultos.webp'
+        '../imagenes/servicios/ent-adultos-may.webp'
     ];
 
     // Variables iniciales ...
