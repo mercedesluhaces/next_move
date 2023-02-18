@@ -2,7 +2,7 @@ body {
     margin: 0;
     min-height: 100vh;
     background-color: black;
-    background-image: url('../imagenes/nosotros/fondo-nosotros.jpg');
+    background-image: url('../imagenes/fondo-inicio-nos_1-100.jpg');
     background-repeat:no-repeat;
     background-size: cover;
     overflow-y: auto;
@@ -173,12 +173,13 @@ footer {
     z-index:100;
 }
 
-a .whatsapp {
-    color:white;
+.whatsapp-icon {
+  color:white;
+  text-decoration: none;
 }
 
-.whatsapp-sticky a :hover{
-    color:white;
+.whatsapp-icon:hover{
+  color:rgb(251, 202, 27);
 }
 
 /*texto footer*/
@@ -261,7 +262,7 @@ a .whatsapp {
 
     .sectionA {
       margin-left:100px;
-      margin-top:0;
+      margin-top:30px;
       margin-bottom:0;
     }
     
@@ -315,11 +316,11 @@ a .whatsapp {
     }
 
     .imagen-nosotros{
-      height: 550px;
+      height: 480px;
     }
     
     .textoNosotros {
-      margin-top:100px;
+      margin-top:60px;
       width:100%;
     }
     

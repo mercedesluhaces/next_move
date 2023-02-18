@@ -214,12 +214,13 @@ button{
     text-decoration: none;
 }
 
-a .whatsapp {
+.whatsapp-icon {
   color:white;
+  text-decoration: none;
 }
 
-.whatsapp-sticky a :hover{
-  color:white;
+.whatsapp-icon:hover{
+  color:rgb(251, 202, 27);
 }
 
 footer {
@@ -281,52 +282,70 @@ footer {
     "sectionA sectionA sectionA"
     "sectionB sectionB sectionB"
     "footer footer footer";
-}
-nav {
-    position:absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    z-index: auto;
-}
+  }
+  nav {
+      position:absolute;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      z-index: auto;
+  }
 
-.nav-links {
-    display:flex;
-    flex-direction: row;
-    align-items: flex-start;
-    width: 40%;
-    height:auto;
-    background-color: transparent;
-    justify-content: space-evenly;
-    transform:none;
-    height: auto;
-    top:4vh;
-    margin-bottom: 0;
-    margin-right: 70px;
-}
+  .nav-links {
+      display:flex;
+      flex-direction: row;
+      align-items: flex-start;
+      width: 40%;
+      height:auto;
+      background-color: transparent;
+      justify-content: space-evenly;
+      transform:none;
+      height: auto;
+      top:4vh;
+      margin-bottom: 0;
+      margin-right: 70px;
+  }
 
-.nav-links li {
-    display:flex;
-    opacity: 1;
-}
+  .nav-links li {
+      display:flex;
+      opacity: 1;
+  }
 
-.nav-links li a {
-    color: white;
-    font-size: 17px;
-    font-weight: 400;
-    font-family: 'Montserrat';
-}
+  .nav-links li a {
+      color: white;
+      font-size: 17px;
+      font-weight: 400;
+      font-family: 'Montserrat';
+  }
 
-.burger {
-    display: none;
-}
+  .burger {
+      display: none;
+  }
 
-.logo {
-    height: 60px;
-    margin-left: 50px;
-    margin-top: 30px;
-}
+  .logo {
+      height: 60px;
+      margin-left: 50px;
+      margin-top: 30px;
+  }
 
+  .carousel{
+    max-width: 1600px;
+  }
+
+  #imagen {
+    width: 300px;
+    height: 445px;
+  }
+
+  #imagenDos {
+    width: 300px;
+    height: 445px;
+  }
+
+  #imagenTres {
+    width: 300px;
+    height: 445px;
+  }
 }
 
 

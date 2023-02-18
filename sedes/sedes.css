@@ -33,6 +33,7 @@ nav {
   flex-direction: column;
   align-content: center;
   margin-top: 20px;
+  margin-left: 0;
 }
 
 .sedeB {
@@ -125,85 +126,77 @@ nav{
   display:flex;
   flex-direction:column ;
   align-items: flex-start;
-  margin-left: 30px;
   margin-top: 30px;
-  margin-right: 30px;
   color: white;
 }
 
 .tituloSedeA {
-  font-size: 22px;
+  font-size: 18px;
   font-family: 'Poppins';
   font-weight: 900;
+  padding-left: 70px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-style: italic;
 }
 
 .logo-sedeA {
-  height: 170px;
+  height: 185px;
   width: auto;
   margin-bottom: 20px;
+  margin-left: 0;
 }
 
-.subtituloSedeA {
-  width: 100%;
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  letter-spacing: 2px;
-  background-image: url("../imagenes/sedes_izquierda.webp");
-  background-size: cover;
-}
 
 /*sede B*/
 .textoSedeB {
-  display:flex;
-  flex-direction:column ;
-  align-items: flex-start;
-  margin-left: 30px;
   margin-top: 30px;
-  margin-right: 30px;
+  margin-bottom: 40PX;
   color: white;
 }
 
 .tituloSedeB {
-  font-size: 22px;
+  font-size: 18px;
   font-family: 'Poppins';
   font-weight: 900;
+  padding-left: 70px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-style: italic;
 }
 
 .logo-sedeB {
-  height: 170px;
+  height: 185px;
   width: auto;
   margin-bottom: 20px;
+  padding-left: 0;
+  position: relative;
+  text-align: end;
 }
 
-.subtituloSedeB {
-  width: 100%;
-  font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  letter-spacing: 2px;
-  background-image: url("../imagenes/sedes_derecha.webp");
-  background-size: cover;
-  
-}
-
-.descripcion{
+.descripcionA{
   font-size: 15px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  padding-left: 70px;
 }
 
-.descripcion strong {
+.descripcionA strong {
   font-style: italic;
 }
 
-.horariosTitulo{
+.descripcionB{
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding-left: 70px;
+}
+
+.descripcionB strong {
+  font-style: italic;
+}
+
+.horariosTituloA{
   color:rgb(251, 202, 27);
   font-size: 18px;
   font-family: 'Poppins';
@@ -211,6 +204,18 @@ nav{
   text-transform: uppercase;
   letter-spacing: 2px;
   font-style: italic;
+  padding-left: 70px;
+}
+
+.horariosTituloB{
+  color:rgb(251, 202, 27);
+  font-size: 18px;
+  font-family: 'Poppins';
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: italic;
+  padding-left: 70px;
 }
 
 /*footer*/
@@ -234,12 +239,13 @@ footer {
   z-index:100;
 }
 
-a .whatsapp {
+.whatsapp-icon {
   color:white;
+  text-decoration: none;
 }
 
-.whatsapp-sticky a :hover{
-  color:white;
+.whatsapp-icon:hover{
+  color:rgb(251, 202, 27);
 }
 
 /*texto footer*/
@@ -260,49 +266,7 @@ a .whatsapp {
             "footer footer footer";
     }
 
-    /*navegador*/
-    nav {
-        position:fixed;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        z-index: auto;
-    }
-
-    .nav-links {
-        display:flex;
-        flex-direction: row;
-        align-items: flex-start;
-        width: 50%;
-        height:auto;
-        background-color: transparent;
-        justify-content: space-around;
-        transform:none;
-        height: auto;
-        top:4vh;
-        margin-bottom: 0;
-        margin-right: 70px;
-    }
-
-    .nav-links li {
-        display:flex;
-        opacity: 1;
-    }
-
-    .nav-links li a {
-        color: white;
-        font-size: 17px;
-        font-weight: 400;
-        font-family: 'Montserrat';
-    }
-
-    .navbar-toggle {
-        color: white;
-    }
-
-    .burger {
-        display: none;
-    }
+    
 
     .logo {
         height: 60px;
@@ -312,51 +276,74 @@ a .whatsapp {
 
   /*sede A*/
   .textoSedeA {
-    margin-left: 100px;
-    margin-top: 50px;
-    align-items: flex-start;
+    margin-top: 30px;
+    
   }
 
   .tituloSedeA {
-    font-size: 22px;
+    padding-left: 73px;
+    font-size: 20px;
   }
 
   .logo-sedeA {
-    height: 250px;
+    height: 200px;
+    margin-bottom: 10px;
   }
 
-  .subtituloSedeA {
-    font-size: 18px;
-  }
 
   /*sede B*/
   .textoSedeB {
-    margin-left: 100px;
-    margin-top: 50px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top:30px;
     align-items: flex-start;
+    
+    
   }
 
   .tituloSedeB {
-    font-size: 22px;
+    padding-left: 80px;
+    font-size: 20px;
+    
   }
 
   .logo-sedeB {
-    height: 250px;
+    height: 200px;
+    margin-bottom: 10px;
+    padding-right: 0;
+    padding-left: auto;
+    position: relative; /*esto no anda*/
+    text-align: end; /*esto no anda*/
   }
 
-  .subtituloSedeB {
-    width: 70%;
-    font-size: 18px;
+
+  .horariosTituloA{
+    font-size: 20px;
+    padding-left: 73px;
   }
 
-  .horariosTitulo{
-    font-size: 22px;
+  .horariosTituloB{
+    font-size: 20px;
+    align-items: flex-start;
+    padding-left: 80px;
+    
   }
 
   /*footer*/
   .textoFooter {
     margin-top: 1px;
     font-size: 12px;
+  }
+
+  .descripcionA{
+    font-size: 13px;
+    padding-left: 73px;
+  }
+
+  .descripcionB{
+    font-size: 13px;
+    padding-left: 80px;
+    
   }
 }
 
@@ -414,22 +401,59 @@ a .whatsapp {
   }
 
   .logo-sedeA {
-    height: 300px;
+    height: 295px;
+    margin-left: 0;
+    padding-left: 0;
   }
 
   .textoSedeA {
-    margin-left: 170px;
+    padding-right: 0;
     margin-top:20px;
+  }
+
+  .tituloSedeA {
+    padding-left: 113px;
+    font-size: 25px;
+  }
+
+  .tituloSedeB {
+    padding-left: 115px;
+    font-size: 25px;
   }
 
   .logo-sedeB {
-    height: 300px;
+    height: 295px;
   }
 
   .textoSedeB {
-    margin-left: 100px;
+    margin-left: auto;
+    margin-right: 0;
     margin-top:20px;
     align-items: flex-start;
+    padding-right: 0;
+    
+  }
+
+  .descripcionA{
+    font-size: 17px;
+    padding-left: 113px;
+
+  }
+
+  .descripcionB{
+    font-size: 17px;
+    padding-left: 113px;
+
+  }
+
+  .horariosTituloA{
+    font-size: 19px;
+    padding-left: 115px;
+  }
+
+  .horariosTituloB{
+    font-size: 19px;
+    padding-left: 115px;
   }
 
   .whatsapp{
@@ -438,3 +462,4 @@ a .whatsapp {
       font-size:40px;
   }
 }
+
