@@ -14,19 +14,77 @@ body {
     display:grid;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        "header nav"
+        "header header"
         "sectionA sectionA"
         "sectionB sectionB"
         "footer footer";
 }
 
-header {
+  header {
     grid-area: header;
+    height:100px;
+    width: 100%;
   }
 
-  nav {
-    grid-area: nav;
+  /* Pantalla de carga */
+  .hidden{
+    overflow: hidden;
   }
+
+  .centrado{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+  }
+
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 6px;
+    width: 13px;
+    background: rgb(251, 202, 27);
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+
+  .lds-facebook div:nth-child(1) {
+    left: 6px;
+    animation-delay: -0.24s;
+  }
+
+  .lds-facebook div:nth-child(2) {
+    left: 26px;
+    animation-delay: -0.12s;
+  }
+
+  .lds-facebook div:nth-child(3) {
+    left: 45px;
+    animation-delay: 0;
+  }
+
+  @keyframes lds-facebook {
+    0% {
+    top: 6px;
+    height: 51px;
+    }
+
+    50%,
+    100% {
+    top: 19px;
+    height: 26px;
+  }
+}
 
   .sectionA {
     grid-area: sectionA;
@@ -44,81 +102,70 @@ header {
     justify-content: center;
   }
 
+/* Navbar */
 nav{
-    z-index: 100;
+  width: 100%;
+  position: absolute;
+  z-index: 101;
 }
 
-.nav-links {
-    position: fixed;
-    right: 0px;
-    height: 100vh;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
+.nav1{
+  background: transparent;
+  height: 80px;
+  color:#fff;
 }
 
-.nav-links li {
-  margin-top: 8px;;
-  list-style: none;
+.contenedor-nav{
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height:inherit;
+  overflow: hidden;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 17px;
+.enlaces{
+  position: fixed;
+  top:80px;
+  background: black;
+  right: 0;
+  height: 100%;
+  transition: 1s;
+  width: 0;
+  overflow: hidden;
 }
 
-.nav-links li a:hover{
-  color:rgb(251, 202, 27);
-  transition: 0.5s;
-}
-
-.burger {
+.enlaces a{
   display: block;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  text-align: center;
+  background: black;
+  color:#fff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: 'Montserrat';
+}
+
+nav .enlaces a:hover{
+  color:rgb(251, 202, 27);
+  transition: 0.6s;
+}
+
+/* icono responsive y logo */
+.icono{
+  display:block;
   cursor: pointer;
+  font-size: 25px;
+  margin-right: 20px;
 }
 
-.nav-active {
-  transform: translateX(0%);
-}
-
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 5px);
-}
-
-.toggle .line2 {
-  opacity: 0;
-}
-
-.toggle .line3 {
-  transform: rotate(45deg) translate(-5px, -5px);
-}
-
-.burger {
-  display:flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-right: 15px;;
-  margin-top:4vh;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: rgb(226, 226, 226);
-  margin: 2px;
-  transition: all 0.3s ease;
-}
-
-/*isotipo*/
-.logo {
-  height: 40px;
-  margin-left: 40px;
-  margin-top: 20px;
+.logo, .logo img{ 
+  height:40px;
+  margin-left:20px;
 }
 
 .imagen-nosotros{
@@ -184,11 +231,12 @@ footer {
 
 /*texto footer*/
 .textoFooter {
-    text-align: center;
-    color: white;
-    font-family: 'Montserrat';
-    margin-top: 5px;
-    font-size: 12px;
+  display:flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Montserrat';
+  margin-top: 1px;
+  font-size: 12px;
 }
 
 /*CELULAR GRANDE*/
@@ -209,29 +257,13 @@ footer {
     margin-top:20px;
     margin-bottom: 20px;
   }
-
-  .burger {
-    display:flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 15px;;
-    margin-top:4vh;
-  }
-  
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: rgb(226, 226, 226);
-    margin: 2px;
-    transition: all 0.3s ease;
-  }
   
   /*isotipo*/
   .logo {
-    height: 40px;
-    margin-left: 40px;
-    margin-top: 20px;
-  }
+    height: 60px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
   
   .imagen-nosotros{
     height: 550px;
@@ -255,7 +287,7 @@ footer {
 @media (min-width:1024px) {
     .contenedor {
         grid-template-areas:
-        "header nav nav"
+        "header header header"
         "sectionA sectionB sectionB"
         "footer footer footer";
     }
@@ -270,50 +302,42 @@ footer {
       margin-left: 50px;
     }
 
-    nav {
-        position:fixed;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        z-index: auto;
+  .contenedor-nav{
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+      height: auto;
     }
 
-    .nav-links {
-        display:flex;
-        flex-direction: row;
-        align-items: flex-start;
-        width: 40%;
-        height:auto;
-        background-color: transparent;
-        justify-content: space-evenly;
-        transform:none;
-        height: auto;
-        top:4vh;
-        margin-bottom: 0;
-        margin-right: 70px;
+  .enlaces{
+      display: flex;
+      position:inherit;
+      overflow:visible;
+      left:auto;
+      width: 40%;
+      background:transparent;
+      height: 0;
+      margin-right: 50px;
     }
 
-    .nav-links li {
-        display:flex;
-        opacity: 1;
-    }
+  nav .enlaces a{
+      display: inline-block;
+      padding: 0;
+      margin-right: 0;
+      text-decoration: none;
+      border-bottom: none;
+      background:transparent;
+  }
 
-    .nav-links li a {
-        color: white;
-        font-size: 17px;
-        font-weight: 400;
-        font-family: 'Montserrat';
-    }
+  .icono{
+      display:none;
+      font-size: 24px;
+      padding: 23.5px 20px;
+  }
 
-    .burger {
-        display: none;
-    }
-
-    .logo {
-        height: 60px;
-        margin-left: 50px;
-        margin-top: 30px;
-    }
+  .logo, .logo img{ 
+      height:60px;
+  }
 
     .imagen-nosotros{
       height: 480px;

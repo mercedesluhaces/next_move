@@ -16,11 +16,13 @@ window.onload = function () {
     let posicionActual = 0;
     let posicionSiguiente = posicionActual + 1;
     let posicionFinal = posicionActual + 2;
+    let posicionFinalDos = posicionActual + 3;
     let $botonRetroceder = document.querySelector('#retroceder');
     let $botonAvanzar = document.querySelector('#avanzar');
     let $imagen = document.querySelector('#imagen');
     let $imagenDos = document.querySelector('#imagenDos');
     let $imagenTres = document.querySelector('#imagenTres');
+    let $imagenCuatro = document.querySelector('#imagenCuatro');
     let intervalo;
     
     //////////////////////////////////////////////////////////////////////
@@ -51,6 +53,13 @@ window.onload = function () {
             posicionFinal++;
         }
 
+        // cuarta imagen ... 
+        if( posicionFinalDos >= IMAGENES.length - 1 ) {
+            posicionFinalDos = 0;
+        } else {
+            posicionFinalDos++;
+        }
+
         renderizarImagen();
     }
 
@@ -66,7 +75,23 @@ window.onload = function () {
 
     // Funcion que actualiza la imagen de imagen dependiendo de la posicion ...
     function renderizarImagen () {
-        if(screen.width > 1024 ){
+        if(screen.width < 768) {
+            $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
+        }else if (screen.width < 1024) {
+             // primera imagen ...
+             $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
+             $imagen.style.margin = "5px";
+ 
+             // segunda imagen ...
+             $imagenDos.style.backgroundImage = `url(${IMAGENES[posicionSiguiente]})`;
+             $imagenDos.style.display = "block";
+             $imagenDos.style.margin = "5px";   
+ 
+             // tercera imagen ...
+             $imagenTres.style.backgroundImage = `url(${IMAGENES[posicionFinal]})`;
+             $imagenTres.style.display = "block";
+             $imagenTres.style.margin = "5px";     
+        } else {
             // primera imagen ...
             $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
             $imagen.style.margin = "5px";
@@ -79,9 +104,12 @@ window.onload = function () {
             // tercera imagen ...
             $imagenTres.style.backgroundImage = `url(${IMAGENES[posicionFinal]})`;
             $imagenTres.style.display = "block";
-            $imagenTres.style.margin = "5px";
-        }else{
-            $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
+            $imagenTres.style.margin = "5px"; 
+
+            // cuarta imagen ...
+            $imagenCuatro.style.backgroundImage = `url(${IMAGENES[posicionFinalDos]})`;
+            $imagenCuatro.style.display = "block";
+            $imagenCuatro.style.margin = "5px";
         }
     }
 
