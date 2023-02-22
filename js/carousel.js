@@ -81,16 +81,19 @@ window.onload = function () {
              // primera imagen ...
              $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
              $imagen.style.margin = "5px";
+             $imagen.style.width = "10%";
  
              // segunda imagen ...
              $imagenDos.style.backgroundImage = `url(${IMAGENES[posicionSiguiente]})`;
              $imagenDos.style.display = "block";
-             $imagenDos.style.margin = "5px";   
+             $imagenDos.style.margin = "5px"; 
+             $imagenDos.style.width = "10%";  
  
              // tercera imagen ...
              $imagenTres.style.backgroundImage = `url(${IMAGENES[posicionFinal]})`;
              $imagenTres.style.display = "block";
-             $imagenTres.style.margin = "5px";     
+             $imagenTres.style.margin = "5px";
+             $imagenTres.style.width = "10%";     
         } else {
             // primera imagen ...
             $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;

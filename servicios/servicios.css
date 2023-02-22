@@ -2,7 +2,8 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: black;
-    /* background-image: url('../imagenes/fondo-index.png'); */
+    background-image: url(../imagenes/servicios/fondo-servicios_2-100.jpg); 
+    background-size: 100% auto;
     background: contain;
     overflow-y: auto;
 }
@@ -212,49 +213,47 @@ button{
 .sectionB {
   display:flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .titulo{
   color:white;
-  font-size: 20px;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Poppins' 'Black Italic' ;
+  font-style: italic;
+  font-weight: 900;
 }
 
 .subTitulo {
   color:rgb(251, 202, 27);
-  font-size: 18px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Poppins' 'Black Italic' ;
+  letter-spacing: 5px;
+  font-weight: 900;
+  font-style: italic;
 }
 
 .cards_content{
-  display:flex;
+  margin: 20px;
+  /*display flex*/
+  display: flex;
+  flex: 1;
   flex-direction: row;
-  width: 100vh;
-  /* width: 190px;
-  height: 254px;
-  border-radius: 20px;
-  padding: 5px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;*/
+  justify-content: space-evenly;
+  margin-top: 30px;
 }
 
-.gympass{
-    background: red;
-    border-radius: 17px;
-    width: 100%;
-    height: 300px;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-    border-radius: 20px;
-    margin:5px;
+figure img {
+  width: 500px;
+  transition: transform .2s;
 }
 
-.promociones{
-    background: white;
-    border-radius: 17px;
-    width: 100%;
-    height: 300px;
-    border-radius: 20px;
-    margin:5px
+figure img:hover {
+    transform: scale(1.2);
 }
+
 
 /*Whatsapp sticky*/
 .whatsapp{

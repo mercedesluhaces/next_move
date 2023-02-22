@@ -235,7 +235,7 @@ footer {
   justify-content: center;
   color: white;
   font-family: 'Montserrat';
-  margin-top: 1px;
+  margin-top: 40px;
   font-size: 12px;
 }
 
@@ -294,7 +294,7 @@ footer {
 
     .sectionA {
       margin-left:100px;
-      margin-top:30px;
+      margin-top:20px;
       margin-bottom:0;
     }
     
@@ -340,21 +340,21 @@ footer {
   }
 
     .imagen-nosotros{
-      height: 480px;
+      height: 445px;
     }
     
     .textoNosotros {
-      margin-top:60px;
+      margin-top:40px;
       width:100%;
     }
     
     .tituloNosotros{
-      font-size: 45px;
+      font-size: 40px;
       letter-spacing: 2px;
     }
     
     .subtituloNosotros{
-      font-size: 35px;
+      font-size: 30px;
       letter-spacing: 2px;
     }
     

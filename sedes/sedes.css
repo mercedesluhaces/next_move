@@ -2,7 +2,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: black;
-  background-image: url('../imagenes/fondo_sedes.webp');
+  background-image: url('/imagenes/fondo-inicio-nos_1-100.jpg');
   background-size: cover;
   overflow-y: auto;
   overflow-x: hidden;
@@ -171,18 +171,16 @@ nav .enlaces a:hover{
 
 /*texto cuerpo*/
 .textoSedeA {
-  display:flex;
-  flex-direction:column ;
-  align-items: flex-start;
-  margin-top: 30px;
+  margin-top: 5px;
   color: white;
+  text-align: center;
+
 }
 
 .tituloSedeA {
-  font-size: 18px;
+  font-size: 27px;
   font-family: 'Poppins';
   font-weight: 900;
-  padding-left: 70px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-style: italic;
@@ -192,7 +190,6 @@ nav .enlaces a:hover{
   height: 185px;
   width: auto;
   margin-bottom: 20px;
-  margin-left: 0;
 }
 
 
@@ -201,15 +198,15 @@ nav .enlaces a:hover{
   margin-top: 30px;
   margin-bottom: 40PX;
   color: white;
+  text-align: center;
 }
 
 .tituloSedeB {
-  font-size: 18px;
+  font-size: 27px;
   font-family: 'Poppins';
   font-weight: 900;
-  padding-left: 70px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   font-style: italic;
 }
 
@@ -217,16 +214,14 @@ nav .enlaces a:hover{
   height: 185px;
   width: auto;
   margin-bottom: 20px;
-  padding-left: 0;
   position: relative;
   text-align: end;
 }
 
 .descripcionA{
-  font-size: 15px;
+  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  padding-left: 70px;
 }
 
 .descripcionA strong {
@@ -234,14 +229,20 @@ nav .enlaces a:hover{
 }
 
 .descripcionB{
-  font-size: 15px;
+  font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  padding-left: 70px;
 }
 
 .descripcionB strong {
   font-style: italic;
+}
+
+.direccion { 
+  font-family: 'Montserrat';
+  font-size: 20px;
+  color:rgb(251, 202, 27);
+  font-weight: 800;
 }
 
 .horariosTituloA{
@@ -252,7 +253,6 @@ nav .enlaces a:hover{
   text-transform: uppercase;
   letter-spacing: 2px;
   font-style: italic;
-  padding-left: 70px;
 }
 
 .horariosTituloB{
@@ -263,7 +263,6 @@ nav .enlaces a:hover{
   text-transform: uppercase;
   letter-spacing: 2px;
   font-style: italic;
-  padding-left: 70px;
 }
 
 /*footer*/
@@ -322,12 +321,13 @@ footer {
 
   /*sede A*/
   .textoSedeA {
-    margin-top: 30px;
+    width: 100%;
+    text-align: start;
+    justify-content: space-evenly;
   }
 
   .tituloSedeA {
-    padding-left: 73px;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .logo-sedeA {
@@ -338,57 +338,48 @@ footer {
 
   /*sede B*/
   .textoSedeB {
-    margin-left: auto;
-    margin-right: 0;
-    margin-top:30px;
-    align-items: flex-start;
-    
-    
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 0;
+    text-align: start;
   }
 
   .tituloSedeB {
-    padding-left: 80px;
-    font-size: 20px;
-    
+    font-size: 24px;
   }
 
   .logo-sedeB {
     height: 200px;
     margin-bottom: 10px;
-    padding-right: 0;
-    padding-left: auto;
-    position: relative; /*esto no anda*/
-    text-align: end; /*esto no anda*/
   }
-
 
   .horariosTituloA{
     font-size: 20px;
-    padding-left: 73px;
   }
 
   .horariosTituloB{
     font-size: 20px;
-    align-items: flex-start;
-    padding-left: 80px;
-    
   }
+
+  .direccion {
+    font-size: 21px;
+  }
+
+  
+
+  .descripcionA{
+    font-size: 13px;
+  }
+
+  .descripcionB{
+    font-size: 13px;
+  }
+
 
   /*footer*/
   .textoFooter {
     margin-top: 1px;
     font-size: 12px;
-  }
-
-  .descripcionA{
-    font-size: 13px;
-    padding-left: 73px;
-  }
-
-  .descripcionB{
-    font-size: 13px;
-    padding-left: 80px;
-    
   }
 }
 
@@ -440,59 +431,58 @@ footer {
   }
 
   .logo-sedeA {
-    height: 295px;
-    margin-left: 0;
-    padding-left: 0;
+    height: 230px;
+
   }
 
   .textoSedeA {
     padding-right: 0;
-    margin-top:20px;
+    margin-top:10px;
+    margin-left: 80px;
   }
 
   .tituloSedeA {
-    padding-left: 113px;
+    
     font-size: 25px;
   }
 
   .tituloSedeB {
-    padding-left: 115px;
+    
     font-size: 25px;
   }
 
   .logo-sedeB {
-    height: 295px;
+    height: 230px;
   }
 
   .textoSedeB {
-    margin-left: auto;
+    margin-left: 80px;
     margin-right: 0;
-    margin-top:20px;
-    align-items: flex-start;
-    padding-right: 0;
+    margin-top:10px;
+
     
   }
 
   .descripcionA{
-    font-size: 17px;
-    padding-left: 113px;
+    font-size: 14px;
+    
 
   }
 
   .descripcionB{
-    font-size: 17px;
-    padding-left: 113px;
+    font-size: 14px;
+    
 
   }
 
   .horariosTituloA{
     font-size: 19px;
-    padding-left: 115px;
+    
   }
 
   .horariosTituloB{
     font-size: 19px;
-    padding-left: 115px;
+    
   }
 
   .whatsapp{
