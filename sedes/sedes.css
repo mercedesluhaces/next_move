@@ -4,6 +4,7 @@ body {
   background-color: black;
   background-image: url('/imagenes/fondo-inicio-nos_1-100.jpg');
   background-size: cover;
+  
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -14,8 +15,7 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
       "header header"
-      "sedeA sedeA"
-      "sedeB sedeB "
+      "sedes sedes"
       "footer footer";
 }
 
@@ -25,21 +25,110 @@ header {
   width: 100%;
 }
 
-.sedeA {
-  grid-area: sedeA;
+.sedes {
+  grid-area: sedes;
   display: flex;
   flex-direction: column;
-  align-content: center;
+  align-content: start;
   margin-top: 20px;
   margin-left: 0;
+  justify-content: space-evenly;
 }
 
+/*texto cuerpo*/
+.sedeA {
+  margin-top: 5px;
+  color: white;
+  text-align: start;
+  padding-right: 25%;
+}
+
+.tituloSedeA {
+  font-size: 20px;
+  font-family: 'Poppins';
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 75px;
+  font-style: italic;
+}
+
+.logo-sedeA {
+  height: 202px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+/*sede B*/
 .sedeB {
-  grid-area: sedeB;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 40PX;
+  color: white;
+  text-align: start;
+}
+
+.tituloSedeB {
+  font-size: 20px;
+  font-family: 'Poppins';
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-style: italic;
+  margin-left: 75px;
+}
+
+.logo-sedeB {
+  height: 202px;
+  width: auto;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: end;
+}
+
+.descripcionA{
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-left: 75px;
+}
+
+.descripcionA strong {
+  font-style: italic;
+}
+
+.descripcionB{
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-left: 75px;
+}
+
+.descripcionB strong {
+  font-style: italic;
+}
+
+
+
+.horariosTituloA{
+  color:rgb(251, 202, 27);
+  font-size: 18px;
+  font-family: 'Poppins';
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: italic;
+  margin-left: 75px;
+}
+
+.horariosTituloB{
+  color:rgb(251, 202, 27);
+  font-size: 18px;
+  font-family: 'Poppins';
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: italic;
+  margin-left: 75px;
 }
 
 /* Pantalla de carga */
@@ -169,101 +258,7 @@ nav .enlaces a:hover{
 }
 
 
-/*texto cuerpo*/
-.textoSedeA {
-  margin-top: 5px;
-  color: white;
-  text-align: center;
 
-}
-
-.tituloSedeA {
-  font-size: 27px;
-  font-family: 'Poppins';
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-style: italic;
-}
-
-.logo-sedeA {
-  height: 185px;
-  width: auto;
-  margin-bottom: 20px;
-}
-
-
-/*sede B*/
-.textoSedeB {
-  margin-top: 30px;
-  margin-bottom: 40PX;
-  color: white;
-  text-align: center;
-}
-
-.tituloSedeB {
-  font-size: 27px;
-  font-family: 'Poppins';
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-style: italic;
-}
-
-.logo-sedeB {
-  height: 185px;
-  width: auto;
-  margin-bottom: 20px;
-  position: relative;
-  text-align: end;
-}
-
-.descripcionA{
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-}
-
-.descripcionA strong {
-  font-style: italic;
-}
-
-.descripcionB{
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-}
-
-.descripcionB strong {
-  font-style: italic;
-}
-
-.direccion { 
-  font-family: 'Montserrat';
-  font-size: 20px;
-  color:rgb(251, 202, 27);
-  font-weight: 800;
-}
-
-.horariosTituloA{
-  color:rgb(251, 202, 27);
-  font-size: 18px;
-  font-family: 'Poppins';
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-style: italic;
-}
-
-.horariosTituloB{
-  color:rgb(251, 202, 27);
-  font-size: 18px;
-  font-family: 'Poppins';
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-style: italic;
-}
 
 /*footer*/
 footer {
@@ -309,7 +304,7 @@ footer {
     .contenedor {
         grid-template-areas:
         "header header header"
-        "sedeA sedeB sedeB"
+        "sedes sedes sedes"
         "footer footer footer";
   }
 
@@ -320,52 +315,56 @@ footer {
   }
 
   /*sede A*/
-  .textoSedeA {
-    width: 100%;
+
+  .sedes {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .sedeA {
     text-align: start;
-    justify-content: space-evenly;
+    margin-top: 0px;
+    margin-left: 0%;
+    padding-right: 0%;
   }
 
   .tituloSedeA {
-    font-size: 24px;
+    font-size: 23px;
+    margin-left: 80px;
   }
 
   .logo-sedeA {
-    height: 200px;
+    height: 210px;
     margin-bottom: 10px;
   }
 
-
   /*sede B*/
-  .textoSedeB {
-    width: 100%;
-    justify-content: space-evenly;
-    margin-top: 0;
+  .sedeB {
     text-align: start;
+    margin-top: 0px;
+    margin-right: 0%;
   }
 
   .tituloSedeB {
-    font-size: 24px;
+    font-size: 23px;
+    margin-left: 80px;
   }
 
   .logo-sedeB {
-    height: 200px;
+    height: 210px;
     margin-bottom: 10px;
   }
 
   .horariosTituloA{
     font-size: 20px;
+    margin-left: 80px;
   }
 
   .horariosTituloB{
     font-size: 20px;
+    margin-left: 80px;
   }
-
-  .direccion {
-    font-size: 21px;
-  }
-
-  
 
   .descripcionA{
     font-size: 13px;
@@ -373,8 +372,8 @@ footer {
 
   .descripcionB{
     font-size: 13px;
+    margin-left: 80px;
   }
-
 
   /*footer*/
   .textoFooter {
@@ -389,7 +388,7 @@ footer {
   .contenedor {
       grid-template-areas:
       "header header header"
-      "sedeA sedeB sedeB"
+      "sedes sedes sedes"
       "footer footer footer";
   }
   
@@ -430,59 +429,58 @@ footer {
       height:60px;
   }
 
-  .logo-sedeA {
-    height: 230px;
-
-  }
-
-  .textoSedeA {
-    padding-right: 0;
-    margin-top:10px;
-    margin-left: 80px;
+  .sedeA {
+    text-align: start;
+    margin-top: 0px;
+    margin-left: 0%;
+    padding-right: 0%;
   }
 
   .tituloSedeA {
-    
-    font-size: 25px;
+    font-size: 23px;
+    margin-left: 111px;
+  }
+
+  .logo-sedeA {
+    height: 300px;
+    margin-bottom: 10px;
+  }
+
+  /*sede B*/
+  .sedeB {
+    text-align: start;
+    margin-top: 0px;
+    margin-right: 0%;
   }
 
   .tituloSedeB {
-    
-    font-size: 25px;
+    font-size: 23px;
+    margin-left: 115px;
   }
 
   .logo-sedeB {
-    height: 230px;
-  }
-
-  .textoSedeB {
-    margin-left: 80px;
-    margin-right: 0;
-    margin-top:10px;
-
-    
-  }
-
-  .descripcionA{
-    font-size: 14px;
-    
-
-  }
-
-  .descripcionB{
-    font-size: 14px;
-    
-
+    height: 300px;
+    margin-bottom: 10px;
   }
 
   .horariosTituloA{
-    font-size: 19px;
-    
+    font-size: 20px;
+    margin-left: 111px;
   }
 
   .horariosTituloB{
-    font-size: 19px;
-    
+    font-size: 20px;
+    margin-left: 115px;
+  }
+
+  .descripcionA{
+    font-size: 15px;
+    margin-left: 111px;
+  }
+
+  .descripcionB{
+    font-size: 15px;
+    margin-left: 115px;
   }
 
   .whatsapp{
@@ -492,3 +490,110 @@ footer {
   }
 }
 
+/*GRID AREA*/
+/*ORDENADOR*/
+@media (min-width:1500px) {
+  .contenedor {
+      grid-template-areas:
+      "header header header"
+      "sedes sedes sedes"
+      "footer footer footer";
+  }
+  
+  .contenedor-nav{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .enlaces{
+      display: flex;
+      position:inherit;
+      overflow:visible;
+      left:auto;
+      width: 40%;
+      background:transparent;
+      height: 0;
+      margin-right: 50px;
+  }
+
+  nav .enlaces a{
+      display: inline-block;
+      padding: 0;
+      margin-right: 0;
+      text-decoration: none;
+      border-bottom: none;
+      background:transparent;
+  }
+
+  .icono{
+      display:none;
+      font-size: 24px;
+      padding: 23.5px 20px;
+  }
+
+  .logo, .logo img{ 
+      height:60px;
+  }
+
+  .sedeA {
+    text-align: start;
+    margin-top: 0px;
+    margin-left: 0%;
+    padding-right: 0%;
+  }
+
+  .tituloSedeA {
+    font-size: 30px;
+    margin-left: 141px;
+  }
+
+  .logo-sedeA {
+    height: 370px;
+    margin-bottom: 10px;
+  }
+
+  /*sede B*/
+  .sedeB {
+    text-align: start;
+    margin-top: 0px;
+    margin-right: 0%;
+  }
+
+  .tituloSedeB {
+    font-size: 30px;
+    margin-left: 143px;
+  }
+
+  .logo-sedeB {
+    height: 370px;
+    margin-bottom: 10px;
+  }
+
+  .horariosTituloA{
+    font-size: 23px;
+    margin-left: 141px;
+  }
+
+  .horariosTituloB{
+    font-size: 23px;
+    margin-left: 143px;
+  }
+
+  .descripcionA{
+    font-size: 18px;
+    margin-left: 141px;
+  }
+
+  .descripcionB{
+    font-size: 18px;
+    margin-left: 141px;
+  }
+
+  .whatsapp{
+      bottom:60px;
+      right:30px;
+      font-size:60px;
+  }
+}
