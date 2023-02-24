@@ -165,32 +165,34 @@ nav .enlaces a:hover{
 /*carousel*/
 .carousel{
     display:flex;
-    max-width: 400px;
+    /* max-width: 400px; */
+    width:auto;
     margin:0 auto;
     justify-content: center;
     align-items: center;
 }
 
 #imagen {
-  width: 310px;
-  height: 460px;
+  width: auto;
+  height: auto;
+  /* height: 460px; */
   background-size: cover;
 }
 
 #imagenDos {
-  width: 310px;
+  width: auto;
   height: 460px;
   background-size: cover;
 }
 
 #imagenTres {
-  width: 310px;
+  width: auto;
   height: 460px;
   background-size: cover;
 }
 
 #imagenCuatro {
-  width: 310px;
+  width: auto;
   height: 460px;
   background-size: cover;
 }

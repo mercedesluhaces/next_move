@@ -1,5 +1,8 @@
 // Window.onload funciona luego que toda la ventana cargo, no solo el DOM ...
 window.onload = function () {
+    $(window).resize(function() {
+        renderizarImagen();
+    });
     
     // Array con las imagenes del carrousel ...
     const IMAGENES = [
@@ -75,9 +78,13 @@ window.onload = function () {
 
     // Funcion que actualiza la imagen de imagen dependiendo de la posicion ...
     function renderizarImagen () {
-        if(screen.width < 768) {
+        if(window.innerWidth < 768) {
             $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
-        }else if (screen.width < 1024) {
+            $imagen.style = "heigth:500px;" 
+            $imagenDos.style = "display:none;" 
+            $imagenTres.style = "display:none;" 
+            $imagenCuatro.style = "display:none;" 
+        }else if (window.innerWidth < 1024) {
              // primera imagen ...
              $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
              $imagen.style.margin = "5px";
@@ -93,7 +100,9 @@ window.onload = function () {
              $imagenTres.style.backgroundImage = `url(${IMAGENES[posicionFinal]})`;
              $imagenTres.style.display = "block";
              $imagenTres.style.margin = "5px";
-             $imagenTres.style.width = "10%";     
+             $imagenTres.style.width = "10%";
+
+             $imagenCuatro.style = "display:none;"     
         } else {
             // primera imagen ...
             $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
