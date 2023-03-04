@@ -92,14 +92,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top:15px;
+    
     margin-bottom: 15px;
   }
 
   .sectionB {
     grid-area: sectionB;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
 
 /* Navbar */
@@ -266,19 +268,19 @@ footer {
 }
   
   .imagen-nosotros{
-    height: 550px;
+    height: 555px;
   }
    
   .tituloNosotros{
-    font-size: 30px;
+    font-size: 35px;
   }
   
   .subtituloNosotros{
-    font-size: 25px;
+    font-size: 30px;
   }
   
   p{
-    font-size: 18px;
+    font-size: 20px;
   }
   
 }
@@ -293,8 +295,22 @@ footer {
     }
 
     .sectionA {
+      vertical-align: middle;
+      justify-content: center;
+      align-items: center;
+      
+      margin-bottom: 15px;
+    }
+  
+    .sectionB {
+      vertical-align: middle;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sectionA {
       margin-left:100px;
-      margin-top:20px;
+      margin-top:0;
       margin-bottom:0;
     }
     
@@ -344,27 +360,56 @@ footer {
     }
     
     .textoNosotros {
-      margin-top:40px;
+      margin-top:35px;
       width:100%;
     }
     
     .tituloNosotros{
-      font-size: 40px;
+      font-size: 35px;
       letter-spacing: 2px;
     }
     
     .subtituloNosotros{
-      font-size: 30px;
+      font-size: 25px;
       letter-spacing: 2px;
     }
     
     p{
-      font-size: 26px;
+      font-size: 21px;
       letter-spacing: 1px;
     }
 }
 
-@media(min-width:1920px) {
+@media(min-width:1280px) {
+
+  .imagen-nosotros{
+    height: 465px;
+  }
+
+  .textoNosotros {
+
+    margin-left: 100px;
+
+  }
+  
+  .tituloNosotros{
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+  
+  .subtituloNosotros{
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+  
+  p{
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media(min-width:1800px) {
 
     .imagen-nosotros{
       height: 700px;
@@ -373,7 +418,7 @@ footer {
     .textoNosotros {
       width: 100%;
       margin-left: 100px;
-      margin-top:100px
+      
     }
     
     .tituloNosotros{
