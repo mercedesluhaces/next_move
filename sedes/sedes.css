@@ -262,7 +262,6 @@ nav .enlaces a:hover{
 /*footer*/
 footer {
   grid-area: footer;
-  /* position: absolute; */
   bottom: 0;
   width: 100%;
 }

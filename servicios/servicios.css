@@ -1,19 +1,19 @@
 body {
-    min-height: 100vh;
     margin: 0;
+    min-height: 100vh;
     background-color: black;
     background-image: url(../imagenes/servicios/fondo-servicios_2-100.jpg); 
     background-repeat:no-repeat;
     background-size: cover;
     overflow-y: auto;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 /*GRID AREA*/
 /*CELULAR*/
 .contenedor {
     display: grid;
-    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-rows: auto .75fr 1fr auto;
     grid-template-areas:
         "header header"
         "sectionA sectionA"
@@ -29,7 +29,8 @@ header {
 
 .sectionA {
     grid-area: sectionA;
-    margin-top:30px;
+    display:flex;
+    align-items: center;
 }
 
 .sectionB {
@@ -165,36 +166,10 @@ nav .enlaces a:hover{
 /*carousel*/
 .carousel{
     display:flex;
-    /* max-width: 400px; */
     width:auto;
     margin:0 auto;
     justify-content: center;
     align-items: center;
-}
-
-#imagen {
-  width: auto;
-  height: auto;
-  /* height: 460px; */
-  background-size: cover;
-}
-
-#imagenDos {
-  width: auto;
-  height: 460px;
-  background-size: cover;
-}
-
-#imagenTres {
-  width: auto;
-  height: 460px;
-  background-size: cover;
-}
-
-#imagenCuatro {
-  width: auto;
-  height: 460px;
-  background-size: cover;
 }
 
 button{
@@ -240,17 +215,16 @@ button{
 
 .cards_content{
   margin: 20px;
-  /*display flex*/
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content:center;
-  margin-top: 0px;
   align-items: center;
+  margin-top: 0px;
 }
 
 figure img {
-  width: 400px;
+  width: 270px;
   transition: transform .2s;
 }
 
@@ -298,6 +272,16 @@ footer {
     font-size: 12px;
 }
 
+@media (min-width:560px) {
+  .contenedor {
+    grid-template-rows: auto 1fr 1fr auto;
+  }
+
+  figure img {
+    width: 438px;
+  }
+}
+
 /*VERSION DE TABLET*/
 @media (min-width:768px) {
 
@@ -305,31 +289,6 @@ footer {
     height: 60px;
     margin-left: 50px;
     margin-top: 30px;
-  }
-
-  /*carousel*/
-  .carousel{
-    max-width: 1600px;
-  }
-
-  #imagen {
-    width: 410px;
-    height: 610px;
-  }
-
-  #imagenDos {
-    width: 410px;
-    height: 610px;
-  }
-
-  #imagenTres {
-    width: 410px;
-    height: 610px;
-  }
-
-  #imagenCuatro {
-    width: 410px;
-    height: 610px;
   }
 
   button{
@@ -353,16 +312,22 @@ footer {
   
   figure img {
     width: 450px;
-    transition: transform .2s;
   }
   
   figure img:hover {
       transform: scale(1.2);
   }
+
+  /*footer*/
+  .textoFooter {
+    margin-top: 1px;
+    font-size: 12px;
+}
 }
 
 @media (min-width:1024px){
   .contenedor {
+    grid-template-rows: auto 1.5fr 1fr auto;
     grid-template-areas:
     "header header header"
     "sectionA sectionA sectionA"
@@ -406,29 +371,14 @@ footer {
   .logo, .logo img{ 
       height:60px;
   }
+
+  .carousel {
+    gap:15px;
+  }
   
-  .carousel{
-    max-width: 1600px;
-  }
-
-  #imagen {
-    width: 300px;
-    height: 445px;
-  }
-
-  #imagenDos {
-    width: 300px;
-    height: 445px;
-  }
-
-  #imagenTres {
-    width: 300px;
-    height: 445px;
-  }
-
-  #imagenCuatro {
-    width: 300px;
-    height: 445px;
+  .sectionB {
+    margin-bottom: 30px;
+    margin-top: 30px;
   }
 
   .cards_content{
@@ -439,12 +389,23 @@ footer {
   }
   
   figure img {
-    width: 450px;
-    transition: transform .2s;
+    width: 400px;
   }
   
   figure img:hover {
       transform: scale(1.2);
+  }
+}
+
+@media (min-width:1280px){
+  figure img {
+    width: 520px;
+  }
+}
+
+@media (min-width:1920px){
+  figure img {
+    width: 670px;
   }
 }
 

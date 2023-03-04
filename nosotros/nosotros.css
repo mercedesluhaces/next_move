@@ -2,7 +2,7 @@ body {
     margin: 0;
     min-height: 100vh;
     background-color: black;
-    background-image: url('../imagenes/fondo-inicio-nos_1-100.jpg');
+    background-image: url(../imagenes/fondo-inicio-nos_1-100.jpg);
     background-repeat:no-repeat;
     background-size: cover;
     overflow-y: auto;
@@ -92,7 +92,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     margin-bottom: 15px;
   }
 
@@ -233,11 +232,10 @@ footer {
 
 /*texto footer*/
 .textoFooter {
-  display:flex;
-  justify-content: center;
+  text-align: center;
   color: white;
   font-family: 'Montserrat';
-  margin-top: 40px;
+  margin-top: 5px;
   font-size: 12px;
 }
 
@@ -282,6 +280,12 @@ footer {
   p{
     font-size: 20px;
   }
+
+  /*footer*/
+  .textoFooter {
+    margin-top: 1px;
+    font-size: 12px;
+}
   
 }
 
@@ -387,9 +391,7 @@ footer {
   }
 
   .textoNosotros {
-
     margin-left: 100px;
-
   }
   
   .tituloNosotros{

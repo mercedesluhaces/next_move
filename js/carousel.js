@@ -1,17 +1,17 @@
 // Window.onload funciona luego que toda la ventana cargo, no solo el DOM ...
 window.onload = function () {
-    $(window).resize(function() {
-        renderizarImagen();
-    });
+     $(window).resize(function() {
+         renderizarImagen();
+    });   
     
     // Array con las imagenes del carrousel ...
     const IMAGENES = [
-        '../imagenes/servicios/ent-personalizado.webp',
-        '../imagenes/servicios/ent-yoga.webp',
-        '../imagenes/servicios/online.webp',
-        '../imagenes/servicios/ent-juvenil.webp',
-        '../imagenes/servicios/infan_juvenil.webp',
-        '../imagenes/servicios/ent-adultos-may.webp'
+        '../imagenes/servicios/carrusel/entrenamiento-personalizado-8.png',
+        '../imagenes/servicios/carrusel/yoga1-8.png',
+        '../imagenes/servicios/carrusel/entrenamiento-online-8.png',
+        '../imagenes/servicios/carrusel/entrenamiento-juvenil-8.png',
+        '../imagenes/servicios/carrusel/entrenamiento-i.juvenil-8.png',
+        '../imagenes/servicios/carrusel/entrenamiento-a.mayores-8.png'
     ];
 
     // Variables iniciales ...
@@ -22,11 +22,10 @@ window.onload = function () {
     let posicionFinalDos = posicionActual + 3;
     let $botonRetroceder = document.querySelector('#retroceder');
     let $botonAvanzar = document.querySelector('#avanzar');
-    let $imagen = document.querySelector('#imagen');
-    let $imagenDos = document.querySelector('#imagenDos');
-    let $imagenTres = document.querySelector('#imagenTres');
-    let $imagenCuatro = document.querySelector('#imagenCuatro');
-    let intervalo;
+    let imagen = document.querySelector('#imagen');
+    let imagenDos = document.querySelector('#imagenDos');
+    let imagenTres = document.querySelector('#imagenTres');
+    let imagenCuatro = document.querySelector('#imagenCuatro');
     
     //////////////////////////////////////////////////////////////////////
     //                            Funciones                             //
@@ -62,7 +61,6 @@ window.onload = function () {
         } else {
             posicionFinalDos++;
         }
-
         renderizarImagen();
     }
 
@@ -76,58 +74,82 @@ window.onload = function () {
         renderizarImagen();
     }
 
-    // Funcion que actualiza la imagen de imagen dependiendo de la posicion ...
+    // Funcion que actualiza la imagen dependiendo de la posicion ...
     function renderizarImagen () {
-        if(window.innerWidth < 768) {
-            $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
-            $imagen.style = "heigth:500px;" 
-            $imagenDos.style = "display:none;" 
-            $imagenTres.style = "display:none;" 
-            $imagenCuatro.style = "display:none;" 
-        }else if (window.innerWidth < 1024) {
-             // primera imagen ...
-             $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
-             $imagen.style.margin = "5px";
-             $imagen.style.width = "10%";
- 
-             // segunda imagen ...
-             $imagenDos.style.backgroundImage = `url(${IMAGENES[posicionSiguiente]})`;
-             $imagenDos.style.display = "block";
-             $imagenDos.style.margin = "5px"; 
-             $imagenDos.style.width = "10%";  
- 
-             // tercera imagen ...
-             $imagenTres.style.backgroundImage = `url(${IMAGENES[posicionFinal]})`;
-             $imagenTres.style.display = "block";
-             $imagenTres.style.margin = "5px";
-             $imagenTres.style.width = "10%";
-
-             $imagenCuatro.style = "display:none;"     
-        } else {
+        if(window.innerWidth < 560) {
             // primera imagen ...
-            $imagen.style.backgroundImage = `url(${IMAGENES[posicionActual]})`;
-            $imagen.style.margin = "5px";
-
-            // segunda imagen ...
-            $imagenDos.style.backgroundImage = `url(${IMAGENES[posicionSiguiente]})`;
-            $imagenDos.style.display = "block";
-            $imagenDos.style.margin = "5px";   
-
+            imagen.innerHTML = `<img src="${IMAGENES[posicionActual]}" style=height:400px;">`
+            // segunda imagen ...  
+            imagenDos.style = "display:none;" 
             // tercera imagen ...
-            $imagenTres.style.backgroundImage = `url(${IMAGENES[posicionFinal]})`;
-            $imagenTres.style.display = "block";
-            $imagenTres.style.margin = "5px"; 
-
+            imagenTres.style = "display:none;" 
             // cuarta imagen ...
-            $imagenCuatro.style.backgroundImage = `url(${IMAGENES[posicionFinalDos]})`;
-            $imagenCuatro.style.display = "block";
-            $imagenCuatro.style.margin = "5px";
+            imagenCuatro.style = "display:none;" 
+                     
+        }
+
+        if(window.innerWidth < 768 && window.innerWidth >=560 ) {
+            // primera imagen ...
+            imagen.innerHTML = `<img src="${IMAGENES[posicionActual]}" style=height:650px;">`
+            // segunda imagen ...
+            imagenDos.style = "display:none;" 
+            // tercera imagen ...
+            imagenTres.style = "display:none;" 
+            // cuarta imagen ...
+            imagenCuatro.style = "display:none;"           
+        }
+
+        if(window.innerWidth < 1024 && window.innerWidth > 768 ) {
+            // primera imagen ...
+            imagen.innerHTML = `<img src="${IMAGENES[posicionActual]}" style=height:650px;">`
+            // segunda imagen ...
+            imagenDos.style = "display:none;" 
+            // tercera imagen ...
+            imagenTres.style = "display:none;" 
+            // cuarta imagen ...
+            imagenCuatro.style = "display:none;"           
+        }
+
+        if (window.innerWidth >= 1024 && window.innerWidth < 1280) {
+            // primera imagen ...
+            imagen.innerHTML = `<img src="${IMAGENES[posicionActual]}" style=height:420px;">`
+            // segunda imagen ...
+            imagenDos.innerHTML = `<img src="${IMAGENES[posicionSiguiente]}" style=height:420px;">`
+            imagenDos.style = "display:block;"
+            // tercera imagen ...
+            imagenTres.innerHTML = `<img src="${IMAGENES[posicionFinal]}" style=height:420px;">`
+            imagenTres.style = "display:block;"  
+            // cuarta imagen ...
+            imagenCuatro.style = "display:none;"
+        }
+
+        if (window.innerWidth >= 1280 && window.innerWidth < 1920 ) {
+            // primera imagen ...
+            imagen.innerHTML = `<img src="${IMAGENES[posicionActual]}" style=height:400px;">`
+            // segunda imagen ...
+            imagenDos.innerHTML = `<img src="${IMAGENES[posicionSiguiente]}" style=height:400px;">`
+            // tercera imagen ...
+            imagenTres.innerHTML = `<img src="${IMAGENES[posicionFinal]}" style=height:400px;">`
+            // cuarta imagen ...
+            imagenCuatro.innerHTML = `<img src="${IMAGENES[posicionFinalDos]}" style=height:400px;">`
+            imagenCuatro.style = "display:block;"
+        }
+
+        if (window.innerWidth >= 1920) {
+            // primera imagen ...
+            imagen.innerHTML = `<img src="${IMAGENES[posicionActual]}" style=height:550px;">`
+            // segunda imagen ...
+            imagenDos.innerHTML = `<img src="${IMAGENES[posicionSiguiente]}" style=height:550px;">`
+            // tercera imagen ...
+            imagenTres.innerHTML = `<img src="${IMAGENES[posicionFinal]}" style=height:550px;">`
+            // cuarta imagen ...
+            imagenCuatro.innerHTML = `<img src="${IMAGENES[posicionFinalDos]}" style=height:550px;">`
         }
     }
 
     // Activa el cambio automatico de imagen ...
     function playIntervalo() {
-        intervalo = setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG); // ejecuta pasar foto cada x tiempo ...
+        setInterval(pasarFoto, TIEMPO_INTERVALO_MILESIMAS_SEG); // ejecuta pasar foto cada x tiempo ...
     }
 
     //////////////////////////////////////////////////////////////////////
@@ -141,4 +163,4 @@ window.onload = function () {
     // Inicializo el carrousel ...
     playIntervalo();
     renderizarImagen();
-} 
+}; 
