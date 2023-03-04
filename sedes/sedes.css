@@ -4,7 +4,7 @@ body {
   background-color: black;
   background-image: url('/imagenes/fondo-inicio-nos_1-100.jpg');
   background-size: cover;
-  
+  background-repeat:no-repeat;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -49,7 +49,7 @@ header {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin-left: 75px;
+  padding-left: 75px;
   font-style: italic;
 }
 
@@ -74,7 +74,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 3px;
   font-style: italic;
-  margin-left: 75px;
+  padding-left: 75px;
 }
 
 .logo-sedeB {
@@ -89,7 +89,7 @@ header {
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  margin-left: 75px;
+  padding-left: 75px;
 }
 
 .descripcionA strong {
@@ -100,7 +100,9 @@ header {
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  margin-left: 75px;
+  padding-left: 75px;
+  padding-right: 20px;
+ 
 }
 
 .descripcionB strong {
@@ -117,7 +119,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-style: italic;
-  margin-left: 75px;
+  padding-left: 75px;
 }
 
 .horariosTituloB{
@@ -128,7 +130,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-style: italic;
-  margin-left: 75px;
+  padding-left: 75px;
 }
 
 /* Pantalla de carga */
@@ -257,9 +259,6 @@ nav .enlaces a:hover{
   margin-left:20px;
 }
 
-
-
-
 /*footer*/
 footer {
   grid-area: footer;
@@ -316,26 +315,21 @@ footer {
 
   /*sede A*/
 
-  .sedes {
-    flex-direction: row;
-    justify-content: space-between;
-
-  }
-
   .sedeA {
     text-align: start;
     margin-top: 0px;
     margin-left: 0%;
     padding-right: 0%;
+    margin-bottom: 60px;
   }
 
   .tituloSedeA {
-    font-size: 23px;
-    margin-left: 80px;
+    font-size: 40px;
+    padding-left: 150px;
   }
 
   .logo-sedeA {
-    height: 210px;
+    height: 400px;
     margin-bottom: 10px;
   }
 
@@ -347,32 +341,35 @@ footer {
   }
 
   .tituloSedeB {
-    font-size: 23px;
-    margin-left: 80px;
+    font-size: 40px;
+    padding-left: 150px;
   }
 
   .logo-sedeB {
-    height: 210px;
+    height: 400px;
     margin-bottom: 10px;
   }
 
   .horariosTituloA{
-    font-size: 20px;
-    margin-left: 80px;
+    font-size: 30px;
+    padding-left: 150px;
   }
 
   .horariosTituloB{
-    font-size: 20px;
-    margin-left: 80px;
+    font-size: 30px;
+    padding-left: 150px;
   }
 
   .descripcionA{
-    font-size: 13px;
+    font-size: 25px;
+    padding-left: 150px;
+    
   }
 
   .descripcionB{
-    font-size: 13px;
-    margin-left: 80px;
+    font-size: 25px;
+    padding-left: 150px;
+    padding-right: 50px;
   }
 
   /*footer*/
@@ -408,11 +405,15 @@ footer {
       background:transparent;
       height: 0;
       margin-right: 50px;
+      flex-direction: row;
+      justify-content: end;
+      
   }
 
   nav .enlaces a{
-      display: inline-block;
-      padding: 0;
+      
+      width: auto;
+      padding: 0px 15px 0px 15px;
       margin-right: 0;
       text-decoration: none;
       border-bottom: none;
@@ -429,58 +430,68 @@ footer {
       height:60px;
   }
 
+  .sedes {
+    flex-direction: row;
+    align-content: start;
+    justify-content: space-between;
+    vertical-align: middle;
+    margin-top: 0;
+    
+
+  }
+
   .sedeA {
     text-align: start;
-    margin-top: 0px;
-    margin-left: 0%;
-    padding-right: 0%;
+    margin-top: 3%;
   }
 
   .tituloSedeA {
-    font-size: 23px;
-    margin-left: 111px;
+    font-size: 26px;
+    padding-left: 103px;
   }
 
   .logo-sedeA {
-    height: 300px;
+    height: 275px;
     margin-bottom: 10px;
   }
 
-  /*sede B*/
+  
   .sedeB {
     text-align: start;
-    margin-top: 0px;
-    margin-right: 0%;
+    margin-top: 3%;
   }
 
   .tituloSedeB {
-    font-size: 23px;
-    margin-left: 115px;
+    font-size: 26px;
+    padding-left: 67px;
   }
 
   .logo-sedeB {
-    height: 300px;
+    
+    height: 275px;
     margin-bottom: 10px;
+    text-align: end;
   }
 
   .horariosTituloA{
     font-size: 20px;
-    margin-left: 111px;
+    padding-left: 103px;
   }
 
   .horariosTituloB{
     font-size: 20px;
-    margin-left: 115px;
+    padding-left: 67px;
   }
 
   .descripcionA{
     font-size: 15px;
-    margin-left: 111px;
+    padding-left: 103px;
   }
 
   .descripcionB{
     font-size: 15px;
-    margin-left: 115px;
+    padding-left: 67px;
+    padding-right: 0;
   }
 
   .whatsapp{
@@ -492,7 +503,7 @@ footer {
 
 /*GRID AREA*/
 /*ORDENADOR*/
-@media (min-width:1500px) {
+@media (min-width:1220px) {
   .contenedor {
       grid-template-areas:
       "header header header"
@@ -516,11 +527,14 @@ footer {
       background:transparent;
       height: 0;
       margin-right: 50px;
+      flex-direction: row;
+      justify-content: end;
   }
 
   nav .enlaces a{
       display: inline-block;
-      padding: 0;
+      width: auto;
+      padding: 0px 15px 0px 15px;
       margin-right: 0;
       text-decoration: none;
       border-bottom: none;
@@ -537,58 +551,332 @@ footer {
       height:60px;
   }
 
-  .sedeA {
-    text-align: start;
-    margin-top: 0px;
-    margin-left: 0%;
-    padding-right: 0%;
-  }
 
   .tituloSedeA {
     font-size: 30px;
-    margin-left: 141px;
+    padding-left: 125px;
   }
 
   .logo-sedeA {
-    height: 370px;
-    margin-bottom: 10px;
-  }
+    height: 335px;
 
-  /*sede B*/
-  .sedeB {
-    text-align: start;
-    margin-top: 0px;
-    margin-right: 0%;
   }
 
   .tituloSedeB {
     font-size: 30px;
-    margin-left: 143px;
+    padding-left: 80px;
   }
 
   .logo-sedeB {
-    height: 370px;
-    margin-bottom: 10px;
+    height: 335px;
   }
 
   .horariosTituloA{
     font-size: 23px;
-    margin-left: 141px;
+    padding-left: 125px;
   }
 
   .horariosTituloB{
     font-size: 23px;
-    margin-left: 143px;
+    padding-left: 80px;
   }
 
   .descripcionA{
     font-size: 18px;
-    margin-left: 141px;
+    padding-left: 125px;
   }
 
   .descripcionB{
     font-size: 18px;
-    margin-left: 141px;
+    padding-left: 80px;
+  }
+
+  .whatsapp{
+      bottom:60px;
+      right:30px;
+      font-size:60px;
+  }
+}
+
+/*GRID AREA*/
+/*ORDENADOR*/
+@media (min-width:1440px) {
+  .contenedor {
+      grid-template-areas:
+      "header header header"
+      "sedes sedes sedes"
+      "footer footer footer";
+  }
+  
+  .contenedor-nav{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .enlaces{
+      display: flex;
+      position:inherit;
+      overflow:visible;
+      left:auto;
+      width: 40%;
+      background:transparent;
+      height: 0;
+      margin-right: 50px;
+      flex-direction: row;
+      justify-content: end;
+  }
+
+  nav .enlaces a{
+      display: inline-block;
+      padding: 0px 15px 0px 15px;
+      margin-right: 0;
+      text-decoration: none;
+      border-bottom: none;
+      background:transparent;
+  }
+
+  .icono{
+      display:none;
+      font-size: 24px;
+      padding: 23.5px 20px;
+  }
+
+  .logo, .logo img{ 
+      height:60px;
+  }
+
+
+  .tituloSedeA {
+    font-size: 35px;
+    padding-left: 145px;
+  }
+
+  .logo-sedeA {
+    height: 385px;
+
+  }
+
+  .tituloSedeB {
+    font-size: 35px;
+    padding-left: 92px;
+  }
+
+  .logo-sedeB {
+    height: 385px;
+  }
+
+  .horariosTituloA{
+    font-size: 28px;
+    padding-left: 145px;
+  }
+
+  .horariosTituloB{
+    font-size: 28px;
+    padding-left: 92px;
+  }
+
+  .descripcionA{
+    font-size: 20px;
+    padding-left: 145px;
+  }
+
+  .descripcionB{
+    font-size: 20px;
+    padding-left: 92px;
+  }
+
+  .whatsapp{
+      bottom:60px;
+      right:30px;
+      font-size:60px;
+  }
+}
+
+/*GRID AREA*/
+/*ORDENADOR*/
+@media (min-width:1600px) {
+  .contenedor {
+      grid-template-areas:
+      "header header header"
+      "sedes sedes sedes"
+      "footer footer footer";
+  }
+  
+  .contenedor-nav{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .enlaces{
+      display: flex;
+      position:inherit;
+      overflow:visible;
+      left:auto;
+      width: 40%;
+      background:transparent;
+      height: 0;
+      margin-right: 50px;
+      flex-direction: row;
+      justify-content: end;
+  }
+
+  nav .enlaces a{
+      display: inline-block;
+      padding: 0px 15px 0px 15px;
+      margin-right: 0;
+      text-decoration: none;
+      border-bottom: none;
+      background:transparent;
+  }
+
+  .icono{
+      display:none;
+      font-size: 24px;
+      padding: 23.5px 20px;
+  }
+
+  .logo, .logo img{ 
+      height:60px;
+  }
+
+
+  .tituloSedeA {
+    font-size: 40px;
+    padding-left: 168px;
+  }
+
+  .logo-sedeA {
+    height: 450px;
+
+  }
+
+  .tituloSedeB {
+    font-size: 40px;
+    padding-left: 108px;
+  }
+
+  .logo-sedeB {
+    height: 450px;
+  }
+
+  .horariosTituloA{
+    font-size: 28px;
+    padding-left: 168px;
+  }
+
+  .horariosTituloB{
+    font-size: 28px;
+    padding-left: 108px;
+  }
+
+  .descripcionA{
+    font-size: 22px;
+    padding-left: 168px;
+  }
+
+  .descripcionB{
+    font-size: 22px;
+    padding-left: 108px;
+  }
+
+  .whatsapp{
+      bottom:60px;
+      right:30px;
+      font-size:60px;
+  }
+}
+
+/*GRID AREA*/
+/*ORDENADOR*/
+@media (min-width:1920px) {
+  .contenedor {
+      grid-template-areas:
+      "header header header"
+      "sedes sedes sedes"
+      "footer footer footer";
+  }
+  
+  .contenedor-nav{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .enlaces{
+      display: flex;
+      position:inherit;
+      overflow:visible;
+      left:auto;
+      width: 40%;
+      background:transparent;
+      height: 0;
+      margin-right: 50px;
+      flex-direction: row;
+      justify-content: end;
+  }
+
+  nav .enlaces a{
+      display: inline-block;
+      padding: 0px 15px 0px 15px;
+      margin-right: 0;
+      text-decoration: none;
+      border-bottom: none;
+      background:transparent;
+  }
+
+  .icono{
+      display:none;
+      font-size: 24px;
+      padding: 23.5px 20px;
+  }
+
+  .logo, .logo img{ 
+      height:60px;
+  }
+
+
+  .tituloSedeA {
+    font-size: 45px;
+    padding-left: 195px;
+  }
+
+  .logo-sedeA {
+    height: 520px;
+
+  }
+
+  .tituloSedeB {
+    font-size: 40px;
+    padding-left: 125px;
+  }
+
+  .logo-sedeB {
+    height: 520px;
+  }
+
+  .horariosTituloA{
+    font-size: 32px;
+    padding-left: 195px;
+  }
+
+  .horariosTituloB{
+    font-size: 32px;
+    padding-left: 125px;
+  }
+
+  .descripcionA{
+    font-size: 25px;
+    padding-left: 195px;
+  }
+
+  .descripcionB{
+    font-size: 25px;
+    padding-left: 125px;
   }
 
   .whatsapp{
