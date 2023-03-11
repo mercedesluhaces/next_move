@@ -368,6 +368,7 @@ nav .enlaces a:hover{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-left: 0;
   }
 
   .fondo-burbuja{
