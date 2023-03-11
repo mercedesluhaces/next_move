@@ -1,430 +1,565 @@
 body {
-    margin: 0;
-    min-height: 100vh;
-    background-color: black;
-    background-image: url('/imagenes/fondo-inicio-nos_1-100.jpg');
-    background-repeat:no-repeat;
-    background-size: cover;
-    overflow-y: hidden;
-    overflow-x: hidden;
+  margin: 0;
+  min-height: 100vh;
+  background-color: black;
+  background-image: url('/imagenes/fondo-inicio-nos_1-100.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 /*VERSION DE CELULAR*/
 .contenedor {
-    display:grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-        "header header"
-        "sectionB sectionB"
-        "sectionA sectionA"
-        "footer footer";
+  display:grid;
+  grid-template-areas:
+      "header header"
+      "sections sections"
+      "footer footer";
 }
 
- .sectionA {
-    grid-area: sectionA;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .sectionB {
-    grid-area: sectionB;
-    display: flex;
-  }
-
- header {
-        grid-area: header;
-        height:100px;
-        width: 100%;
- }
-
-/* Pantalla de carga */
-  .hidden{
-    overflow: hidden;
-   }
-  
-  .centrado{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background: #000;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .lds-facebook {
-    display: inline-block;
-    position: relative;
-    width: 64px;
-    height: 64px;
-  }
-  
-  .lds-facebook div {
-    display: inline-block;
-    position: absolute;
-    left: 6px;
-    width: 13px;
-    background: rgb(251, 202, 27);
-    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-  }
-  
-  .lds-facebook div:nth-child(1) {
-    left: 6px;
-    animation-delay: -0.24s;
-  }
-  
-  .lds-facebook div:nth-child(2) {
-    left: 26px;
-    animation-delay: -0.12s;
-  }
-  
-  .lds-facebook div:nth-child(3) {
-    left: 45px;
-    animation-delay: 0;
-  }
-  
-  @keyframes lds-facebook {
-    0% {
-      top: 6px;
-      height: 51px;
-    }
-  
-    50%,
-    100% {
-      top: 19px;
-      height: 26px;
-    }
-  }
-
-  /* Navbar */
-  nav{
-    width: 100%;
-    position: absolute;
-    z-index: 101;
-  }
-
-  .nav1{
-    background: transparent;
-    height: 80px;
-    color:#fff;
-  }
-
-  .contenedor-nav{
-    display: flex;
-    margin: auto;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    height:inherit;
-    overflow: hidden;
-  }
-
-  .enlaces{
-    position: fixed;
-    top:80px;
-    background: black;
-    right: 0;
-    height: 100%;
-    transition: 1s;
-    width: 0;
-    overflow: hidden;
-  }
-
-  .enlaces a{
-    display: block;
-    width: 100%;
-    height: 50px;
-    padding: 20px;
-    text-align: center;
-    background: black;
-    color:#fff;
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: 400;
-    font-family: 'Montserrat';
-  }
-
-  nav .enlaces a:hover{
-    color:rgb(251, 202, 27);
-    transition: 0.6s;
-  }
-
-  /* icono responsive y logo */
-  .icono{
-    display:block;
-    cursor: pointer;
-    font-size: 25px;
-    margin-right: 20px;
-  }
-
-  .logo, .logo img{ 
-    height:40px;
-    margin-left:20px;
-  }
+.sections {
+  grid-area: sections;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /*texto cuerpo*/
-.textoInicio {
-    display:flex;
-    flex-direction:column ;
-    align-items: flex-start;
-    color: white;
-}
-
-.tituloInicio {
-    font-size: 17px;
-    font-family: 'Poppins';
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-/* .logo-inicio {
-    height: 120px;
-    width: auto;
-    margin-bottom: 20px;
-} */
-
-#imgInicio{
-  width: auto;
-  margin-bottom: 20px;
-} 
-
-.subtituloInicio {
-    font-size: 17px;
-    font-family: 'Poppins';
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.sectionA {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 .sectionB {
-    justify-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
-    /*imagen cuerpo*/
-    .fondoInicio {
-        height: 250px;
-        position: relative;
-        align-content: center;
-        margin-top: 20px;
-    }
+.A { 
+width: 220px;
+padding-bottom: 15px;
+text-align: center;
+padding-top:50px;
+}
+
+.C { 
+width: 280px;
+padding-bottom: 15px;
+text-align: center;
+}
+
+
+
+/* .logo-inicio {
+  height: 120px;
+  width: auto;
+  margin-bottom: 20px;
+} */
+
+#imgInicio{
+width: auto;
+margin-bottom: 20px;
+} 
+
+
+/*imagen cuerpo*/
+.fondoInicio {
+  height: 250px;
+}
+
+header {
+      grid-area: header;
+      height:100px;
+      width: 100%;
+}
+
+/* Pantalla de carga */
+.hidden{
+  overflow: hidden;
+ }
+
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 6px;
+  width: 13px;
+  background: rgb(251, 202, 27);
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 6px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 26px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 45px;
+  animation-delay: 0;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 6px;
+    height: 51px;
+  }
+
+  50%,
+  100% {
+    top: 19px;
+    height: 26px;
+  }
+}
+
+/* Navbar */
+nav{
+  width: 100%;
+  position: absolute;
+  z-index: 101;
+}
+
+.nav1{
+  background: transparent;
+  height: 80px;
+  color:#fff;
+}
+
+.contenedor-nav{
+  display: flex;
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height:inherit;
+  overflow: hidden;
+}
+
+.enlaces{
+  position: fixed;
+  top:80px;
+  background: black;
+  right: 0;
+  height: 100%;
+  transition: 1s;
+  width: 0;
+  overflow: hidden;
+}
+
+.enlaces a{
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  text-align: center;
+  background: black;
+  color:#fff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 400;
+  font-family: 'Montserrat';
+}
+
+nav .enlaces a:hover{
+  color:rgb(251, 202, 27);
+  transition: 0.6s;
+}
+
+/* icono responsive y logo */
+.icono{
+  display:block;
+  cursor: pointer;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.logo, .logo img{ 
+  height:40px;
+  margin-left:20px;
+}
+
+
 
 /*footer*/
 footer {
-    grid-area: footer;
-    bottom: 0;
-    width: 100%;
+  grid-area: footer;
+  bottom: 0;
+  width: 100%;
 }
 
 .whatsapp{
-    position:fixed;
-    width:60px;
-    height:60px;
-    bottom:30px;
-    right:20px;
-    color:#FFF;
-    border-radius:50px;
-    text-align:center;
-    font-size:40px;
-    z-index:100;
-    text-decoration: none;
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:30px;
+  right:20px;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:40px;
+  z-index:100;
+  text-decoration: none;
 }
 
 .whatsapp-icon {
-    color:white;
-    text-decoration: none;
-  }
-  
-  .whatsapp-icon:hover{
-    color:rgb(251, 202, 27);
-  }
+  color:white;
+  text-decoration: none;
+}
+
+.whatsapp-icon:hover{
+  color:rgb(251, 202, 27);
+}
 
 /*texto footer*/
 .textoFooter {
-    text-align: center;
-    color: white;
-    font-family: 'Montserrat';
-    margin-top: 5px;
-    font-size: 12px;
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat';
+  margin-top: 5px;
+  font-size: 12px;
 }
 
 
 /*VERSION DE TABLET*/
 @media (min-width:768px) {
-    .contenedor {
-        grid-template-areas:
-            "header header header"
-            "sectionA sectionB sectionB"
-            "footer footer footer";
-    }
+  .contenedor {
+      grid-template-areas:
+          "header header header"
+          "sections sections sections"
+          "footer footer footer";
+  }
 
-    .logo {
-      height: 60px;
-      margin-left: 50px;
-      margin-top: 30px;
-    }
+  .logo {
+    height: 60px;
+    margin-left: 50px;
+    margin-top: 30px;
+  }
 
-    .sectionA {
-      justify-content: flex-start;
-    }
 
-    /*seccionA*/
-    .textoInicio {
-        margin-left: 50px;
-        margin-top: 100px;
-        align-items: flex-start;
-    }
+  /*seccionA*/
+  .A { 
+    width: 500px;
+    padding-bottom: 15px;
+    text-align: center;
+    padding-top:50px;
+  }
+  
+  .C { 
+    width: 560px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  
+  #imgInicio{
+    width: auto;
+    margin-bottom: 20px;
+  } 
 
-    .tituloInicio {
-        font-size: 13px;
-    }
+  /* .logo-inicio {
+      height: 110px;
+  } */
 
-    /* .logo-inicio {
-        height: 110px;
-    } */
 
-    .subtituloInicio {
-        font-size: 13px;
-        letter-spacing: 1px;
-    }
+  /*seccionB*/
+  .fondoInicio {
+      height: 500px;
+      width: auto;
+  }
 
-    /*seccionB*/
-    .fondoInicio {
-        height: 340px;
-        width: auto;
-    }
-
-    /*footer*/
-    .textoFooter {
-        margin-top: 1px;
-        font-size: 12px;
-    }
+  /*footer*/
+  .textoFooter {
+      margin-top: 1px;
+      font-size: 12px;
+  }
 }
 
 /*GRID AREA*/
 /*ORDENADOR*/
 @media (min-width:1024px) {
-    .contenedor {
-        grid-template-areas:
-        "header header header"
-        "sectionA sectionB sectionB"
-        "footer footer footer";
+  .contenedor {
+      grid-template-areas:
+      "header header header"
+      "sections sections sections"
+      "footer footer footer";
+  }
+
+  .contenedor-nav{
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+      height: auto;
     }
 
-    .contenedor-nav{
-        display: flex;
-        margin: auto;
-        justify-content: space-between;
-        height: auto;
-      }
-
-    .enlaces{
-        display: flex;
-        position:inherit;
-        overflow:visible;
-        left:auto;
-        width: 40%;
-        background:transparent;
-        height: 0;
-        margin-right: 50px;
-      }
-
-    nav .enlaces a{
-        display: inline-block;
-        padding: 0;
-        margin-right: 0;
-        text-decoration: none;
-        border-bottom: none;
-        background:transparent;
+  .enlaces{
+      display: flex;
+      position:inherit;
+      overflow:visible;
+      left:auto;
+      width: 40%;
+      background:transparent;
+      height: 0;
+      margin-right: 50px;
+      flex-direction: row;
+      justify-content: end;
     }
 
-    .icono{
-        display:none;
-        font-size: 24px;
-        padding: 23.5px 20px;
-    }
+  nav .enlaces a{
+    width: auto;
+    padding: 0px 15px 0px 15px;
+    margin-right: 0;
+    text-decoration: none;
+    border-bottom: none;
+    background:transparent;
+  }
 
-    .logo, .logo img{ 
-        height:60px;
-    }
-    
-    /*seccionA*/
-    .textoInicio {
-        margin-left: 100px;
-        margin-top: 150px;
-        margin-right:0;
+  .icono{
+      display:none;
+      font-size: 24px;
+      padding: 23.5px 20px;
+  }
 
-    }
-    
-    /* .logo-inicio {
-        height: 170px;
-        width: auto;
-    } */
+  .logo, .logo img{ 
+      height:60px;
+  }
+  
+  .sections {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content:center;
+  }
 
-    #imgInicio{
+  /*texto cuerpo*/
+  .sectionA {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sectionB {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .A { 
+    width: 280px;
+    padding-bottom: 15px;
+    text-align: center;
+    padding-top:50px;
+  }
+  
+  .C { 
+    width: 280px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  .fondoInicio {
+    height: 410px;
+    padding-left: 20px;
+  }
+
+  
+  /* .logo-inicio {
+      height: 170px;
       width: auto;
-    } 
-    
-    .tituloInicio {
-        font-size: 19px;
-    }
-    
-    .subtituloInicio {
-        font-size: 20px;
-    }
+  } */
 
-    /*seccionB*/
-    .sectionB{
-        justify-content: center;
-    }
 
-    .fondoInicio {
-        height: 500px;
-        width: auto;
-        margin:0;
-    }
-
-    .whatsapp{
-        bottom:40px;
-        right:30px;
-        font-size:40px;
-    }
+  .whatsapp{
+      bottom:40px;
+      right:30px;
+      font-size:40px;
+  }
 }
 
-@media (min-width:1920px) {
+@media (min-width:1200px) {
 
-    /*seccionA*/
-    .textoInicio {
-        margin-top:200px;
-        margin-left: 250px;
-    }
+  /*seccionA*/
+  .sections {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .tituloInicio {
-        font-size: 23px;
-    }
+  /*texto cuerpo*/
+  .sectionA {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sectionB {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
-    .subtituloInicio {
-        font-size: 24px;
-    }
+  }
+  
+  .A { 
+    width: 310px;
+    padding-bottom: 15px;
+    text-align: center;
+    padding-top:50px;
+  }
+  
+  .C { 
+    width: 310px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
 
-    /* .logo-inicio {
-        height: 200px;
-        width: auto;
-    } */
+  .fondoInicio {
+    height: 480px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+  }
 
-    #imgInicio{
+  .contenedor-nav{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .enlaces{
+    display: flex;
+    position:inherit;
+    overflow:visible;
+    left:auto;
+    width: 40%;
+    background:transparent;
+    height: 0;
+    margin-right: 50px;
+    flex-direction: row;
+    justify-content: end;
+}
+
+nav .enlaces a{
+    display: inline-block;
+    width: auto;
+    padding: 0px 15px 0px 15px;
+    margin-right: 0;
+    text-decoration: none;
+    border-bottom: none;
+    background:transparent;
+}
+  
+  /* .logo-inicio {
+      height: 200px;
       width: auto;
-    } 
+  } */
 
-    /*seccionB*/
-    .fondoInicio {
-        height: 700px;
-    }
+  #imgInicio{
+    width: auto;
+  } 
 
-    footer{
-        position:relative;
-    }
+  /*seccionB*/
+  
+
+  footer{
+      position:relative;
+  }
+
+}
+
+@media (min-width:1400px) {
+
+.A { 
+  width: 400px;
+  padding-bottom: 15px;
+  text-align: center;
+  padding-top:50px;
+}
+
+.C { 
+  width:400px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.fondoInicio {
+  height: 550px;
+}
+
+.contenedor-nav{
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  height: auto;
+}
+
+.enlaces{
+    display: flex;
+    position:inherit;
+    overflow:visible;
+    left:auto;
+    width: 40%;
+    background:transparent;
+    height: 0;
+    margin-right: 50px;
+    flex-direction: row;
+    justify-content: end;
+}
+
+nav .enlaces a{
+    display: inline-block;
+    padding: 0px 15px 0px 15px;
+    margin-right: 0;
+    text-decoration: none;
+    border-bottom: none;
+    background:transparent;
+}
+
+}
+
+@media (min-width:1900px) {
+
+.A { 
+  width: 600px;
+  padding-bottom: 15px;
+  text-align: center;
+  padding-top:50px;
+}
+
+.C { 
+  width:600px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.fondoInicio {
+  height: 700px;
+}
+
 
 }
