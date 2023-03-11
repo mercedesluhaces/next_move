@@ -2,7 +2,7 @@ body {
     margin: 0;
     min-height: 100vh;
     background-color: black;
-    background-image: url(../imagenes/fondo-inicio-nos_1-100.jpg);
+    background-image: url(../imagenes/fondo_inicio.jpg);
     background-repeat:no-repeat;
     background-size: cover;
     overflow-y: auto;
@@ -15,8 +15,7 @@ body {
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header header"
-        "sectionA sectionA"
-        "sectionB sectionB"
+        "sections sections"
         "footer footer";
 }
 
@@ -86,6 +85,15 @@ body {
   }
 }
 
+  .sections {
+    grid-area: sections;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:20px;
+  }
+
   .sectionA {
     grid-area: sectionA;
     display: flex;
@@ -101,6 +109,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 280px;
   }
 
 /* Navbar */
@@ -191,7 +200,7 @@ nav .enlaces a:hover{
   font-weight: 400;
 }
 
-p{
+.textoNosotros .p{
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -231,7 +240,7 @@ footer {
 }
 
 /*texto footer*/
-.textoFooter {
+.textoFooter{
   text-align: center;
   color: white;
   font-family: 'Montserrat';
@@ -253,9 +262,18 @@ footer {
 /*TABLET*/
 @media (min-width:768px) {
 
+  .sections {
+    flex-direction: row;
+    gap:0;
+  }
+
   .sectionA{
     margin-top:20px;
     margin-bottom: 20px;
+  }
+
+  .sectionB {
+    max-width: none;
   }
   
   /*isotipo*/
@@ -277,7 +295,7 @@ footer {
     font-size: 30px;
   }
   
-  p{
+  .textoNosotros .p{
     font-size: 20px;
   }
 
@@ -285,7 +303,12 @@ footer {
   .textoFooter {
     margin-top: 1px;
     font-size: 12px;
-}
+  }
+
+  footer {
+    margin-top: 1;
+    position: absolute;
+  }
   
 }
 
@@ -294,7 +317,7 @@ footer {
     .contenedor {
         grid-template-areas:
         "header header header"
-        "sectionA sectionB sectionB"
+        "sections sections sections"
         "footer footer footer";
     }
 
@@ -302,7 +325,6 @@ footer {
       vertical-align: middle;
       justify-content: center;
       align-items: center;
-      
       margin-bottom: 15px;
     }
   
@@ -327,7 +349,7 @@ footer {
       margin: auto;
       justify-content: space-between;
       height: auto;
-    }
+  }
 
   .enlaces{
       display: flex;
@@ -338,7 +360,7 @@ footer {
       background:transparent;
       height: 0;
       margin-right: 50px;
-    }
+  }
 
   nav .enlaces a{
       display: inline-block;
@@ -378,7 +400,7 @@ footer {
       letter-spacing: 2px;
     }
     
-    p{
+    .textoNosotros p{
       font-size: 21px;
       letter-spacing: 1px;
     }
@@ -404,11 +426,10 @@ footer {
     letter-spacing: 2px;
   }
   
-  p{
+  .textoNosotros p{
     font-size: 24px;
     letter-spacing: 1px;
   }
-
 }
 
 @media(min-width:1800px) {
@@ -433,9 +454,9 @@ footer {
       letter-spacing: 2px;
     }
     
-    p{
+    .textoNosotros p{
       font-size: 30px;
       letter-spacing: 1px;
-    }
+    }  
 
 }

@@ -14,7 +14,12 @@ $(document).ready( function(){
             imgInit.style = "height:200x;"
         }
     
-        if (window.innerWidth >= 1024){
+        if (window.innerWidth >= 1024 < 1200){
+            imgInit.innerHTML = '<img src="../imagenes/logo.webp" style="height:150px;">';
+            imgInit.style = "height:150px;"
+        }
+
+        if (window.innerWidth >= 1200){
             imgInit.innerHTML = '<img src="../imagenes/logo.webp" style="height:170px;">';
             imgInit.style = "height:170px;"
         }

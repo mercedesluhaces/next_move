@@ -2,7 +2,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: black;
-  background-image: url('/imagenes/fondo-inicio-nos_1-100.jpg');
+  background-image: url('/imagenes/fondo_inicio.jpg');
   background-size: cover;
   background-repeat:no-repeat;
   overflow-y: auto;
@@ -277,6 +277,7 @@ footer {
   text-align:center;
   font-size:40px;
   z-index:100;
+  text-decoration: none;
 }
 
 .whatsapp-icon {
@@ -313,7 +314,6 @@ footer {
   }
 
   /*sede A*/
-
   .sedeA {
     text-align: start;
     margin-top: 0px;
@@ -435,8 +435,6 @@ footer {
     justify-content: space-between;
     vertical-align: middle;
     margin-top: 0;
-    
-
   }
 
   .sedeA {
@@ -454,7 +452,6 @@ footer {
     margin-bottom: 10px;
   }
 
-  
   .sedeB {
     text-align: start;
     margin-top: 2%;
@@ -494,9 +491,9 @@ footer {
   }
 
   .whatsapp{
-      bottom:40px;
-      right:30px;
-      font-size:40px;
+    bottom:40px;
+    right:30px;
+    font-size:40px;
   }
 }
 
@@ -558,7 +555,6 @@ footer {
 
   .logo-sedeA {
     height: 335px;
-
   }
 
   .tituloSedeB {
@@ -588,12 +584,6 @@ footer {
   .descripcionB{
     font-size: 18px;
     padding-left: 80px;
-  }
-
-  .whatsapp{
-      bottom:60px;
-      right:30px;
-      font-size:60px;
   }
 }
 
@@ -685,12 +675,6 @@ footer {
     font-size: 20px;
     padding-left: 92px;
   }
-
-  .whatsapp{
-      bottom:60px;
-      right:30px;
-      font-size:60px;
-  }
 }
 
 /*GRID AREA*/
@@ -781,12 +765,6 @@ footer {
     font-size: 22px;
     padding-left: 108px;
   }
-
-  .whatsapp{
-      bottom:60px;
-      right:30px;
-      font-size:60px;
-  }
 }
 
 /*GRID AREA*/
@@ -838,7 +816,6 @@ footer {
       height:60px;
   }
 
-
   .tituloSedeA {
     font-size: 45px;
     padding-left: 195px;
@@ -846,7 +823,6 @@ footer {
 
   .logo-sedeA {
     height: 520px;
-
   }
 
   .tituloSedeB {
@@ -876,11 +852,5 @@ footer {
   .descripcionB{
     font-size: 25px;
     padding-left: 125px;
-  }
-
-  .whatsapp{
-      bottom:60px;
-      right:30px;
-      font-size:60px;
   }
 }
